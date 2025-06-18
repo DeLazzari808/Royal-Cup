@@ -1,6 +1,6 @@
 # 🏆 Royal Cup - Portal do Campeonato
 
-Este repositório contém o código-fonte da aplicação web "Royal Cup", uma plataforma moderna desenvolvida para o acompanhamento completo de um campeonato de futebol.
+Este repositório contém o código-fonte da aplicação web "Royal Cup", uma plataforma moderna desenvolvida para o acompanhamento completo do campeonato da Royal Cup.
 
 🔗 **Acesse a versão ao vivo:** [https://royal-cup-br.web.app/](https://royal-cup-br.web.app/)
 
@@ -35,5 +35,7 @@ Este projeto foi construído utilizando um stack de tecnologias modernas, visand
 Este projeto está licenciado sob a MIT License com Restrição Comercial. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 **Importante:** Este software é protegido por direitos autorais e não pode ser usado, copiado, modificado, mesclado, publicado, distribuído, sublicenciado e/ou vendido sem a permissão expressa por escrito do detentor dos direitos autorais.
+
+Este projeto esta em sua versão 1.0 e ainda conta com funcionalidades em desenvolvimento.
 
 © 2024 Royal Cup. Todos os direitos reservados. 

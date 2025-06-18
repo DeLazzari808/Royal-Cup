@@ -1,0 +1,466 @@
+{
+  "times": {
+    "ver": {
+      "nome": "Veracruz",
+      "logoUrl": "/logos/veracruz.jpg",
+      "pontos": 3,
+      "jogos": 1,
+      "vitorias": 1,
+      "empates": 0,
+      "derrotas": 0,
+      "golsPro": 2,
+      "golsContra": 1,
+      "descricao": "O time do Veracruz é conhecido por sua garra e determinação em campo.",
+      "jogadores": {
+        "j01": {
+          "nome": "Pedro Artilheiro",
+          "posicao": "Atacante",
+          "fotoUrl": "/img/jogadores/pedro.jpg"
+        },
+        "j02": {
+          "nome": "Marcos Goleiro",
+          "posicao": "Goleiro",
+          "fotoUrl": "/img/jogadores/marcos.jpg"
+        },
+        "j03": {
+          "nome": "Carlos Zagueiro",
+          "posicao": "Zagueiro"
+        }
+      },
+      "comissaoTecnica": {
+        "ct01": {
+          "nome": "José Treinador",
+          "cargo": "Técnico",
+          "fotoUrl": "/img/comissao/jose.jpg"
+        },
+        "ct02": {
+          "nome": "Ricardo Auxiliar",
+          "cargo": "Auxiliar Técnico"
+        }
+      }
+    },
+    "amb": {
+      "nome": "Ambfoot",
+      "logoUrl": "/logos/ambfoot.jpg",
+      "pontos": 0,
+      "jogos": 1,
+      "vitorias": 0,
+      "empates": 0,
+      "derrotas": 1,
+      "golsPro": 1,
+      "golsContra": 2,
+      "descricao": "Time tradicional com grande história no futebol amador.",
+      "jogadores": {
+        "j01": {
+          "nome": "João Silva",
+          "posicao": "Atacante"
+        },
+        "j02": {
+          "nome": "Paulo Santos",
+          "posicao": "Goleiro"
+        }
+      },
+      "comissaoTecnica": {
+        "ct01": {
+          "nome": "Antônio Técnico",
+          "cargo": "Técnico"
+        }
+      }
+    },
+    "cfc": {
+      "nome": "Carecas FC",
+      "logoUrl": "/logos/carecas-fc.jpeg",
+      "pontos": 1,
+      "jogos": 1,
+      "vitorias": 0,
+      "empates": 1,
+      "derrotas": 0,
+      "golsPro": 0,
+      "golsContra": 0,
+      "descricao": "Time conhecido pela sua identidade única e torcida apaixonada.",
+      "jogadores": {
+        "j01": {
+          "nome": "Roberto Careca",
+          "posicao": "Atacante"
+        }
+      },
+      "comissaoTecnica": {
+        "ct01": {
+          "nome": "Mário Treinador",
+          "cargo": "Técnico"
+        }
+      }
+    },
+    "imp": {
+      "nome": "Imperial",
+      "logoUrl": "/logos/imperial.jpg",
+      "pontos": 1,
+      "jogos": 1,
+      "vitorias": 0,
+      "empates": 1,
+      "derrotas": 0,
+      "golsPro": 0,
+      "golsContra": 0,
+      "descricao": "Time com tradição e história no futebol local.",
+      "jogadores": {
+        "j01": {
+          "nome": "Lucas Imperial",
+          "posicao": "Meio-Campo"
+        }
+      },
+      "comissaoTecnica": {
+        "ct01": {
+          "nome": "Carlos Técnico",
+          "cargo": "Técnico"
+        }
+      }
+    },
+    "fdq": {
+      "nome": "Fut D'Quinta",
+      "logoUrl": "/logos/fut-d-quinta.jpg",
+      "pontos": 1,
+      "jogos": 1,
+      "vitorias": 0,
+      "empates": 1,
+      "derrotas": 0,
+      "golsPro": 1,
+      "golsContra": 1,
+      "descricao": "Time que representa a paixão pelo futebol de rua.",
+      "jogadores": {
+        "j01": {
+          "nome": "Rafael Rua",
+          "posicao": "Atacante"
+        }
+      },
+      "comissaoTecnica": {
+        "ct01": {
+          "nome": "Pedro Técnico",
+          "cargo": "Técnico"
+        }
+      }
+    },
+    "vmt": {
+      "nome": "Vila Marta",
+      "logoUrl": "/logos/vila-marta.jpeg",
+      "pontos": 1,
+      "jogos": 1,
+      "vitorias": 0,
+      "empates": 1,
+      "derrotas": 0,
+      "golsPro": 1,
+      "golsContra": 1,
+      "descricao": "Time que representa a força do futebol de várzea.",
+      "jogadores": {
+        "j01": {
+          "nome": "Marcos Vila",
+          "posicao": "Atacante"
+        }
+      },
+      "comissaoTecnica": {
+        "ct01": {
+          "nome": "José Técnico",
+          "cargo": "Técnico"
+        }
+      }
+    },
+    "tnk": {
+      "nome": "Tanck",
+      "logoUrl": "/logos/tanck-foot.png",
+      "pontos": 0,
+      "jogos": 0,
+      "vitorias": 0,
+      "empates": 0,
+      "derrotas": 0,
+      "golsPro": 0,
+      "golsContra": 0,
+      "descricao": "Time em ascensão no cenário do futebol amador.",
+      "jogadores": {
+        "j01": {
+          "nome": "Tiago Tanck",
+          "posicao": "Atacante"
+        }
+      },
+      "comissaoTecnica": {
+        "ct01": {
+          "nome": "Ricardo Técnico",
+          "cargo": "Técnico"
+        }
+      }
+    },
+    "cmg": {
+      "nome": "Cap Mil Grau",
+      "logoUrl": "/logos/cap-mil-grau.jpg",
+      "pontos": 0,
+      "jogos": 0,
+      "vitorias": 0,
+      "empates": 0,
+      "derrotas": 0,
+      "golsPro": 0,
+      "golsContra": 0,
+      "descricao": "Time conhecido por sua garra e determinação.",
+      "jogadores": {
+        "j01": {
+          "nome": "Carlos Cap",
+          "posicao": "Atacante"
+        }
+      },
+      "comissaoTecnica": {
+        "ct01": {
+          "nome": "Antônio Técnico",
+          "cargo": "Técnico"
+        }
+      }
+    },
+    "ast": {
+      "nome": "Aster FC",
+      "logoUrl": "/logos/aster.jpg",
+      "pontos": 0,
+      "jogos": 0,
+      "vitorias": 0,
+      "empates": 0,
+      "derrotas": 0,
+      "golsPro": 0,
+      "golsContra": 0,
+      "descricao": "Time com grande potencial e futuro promissor.",
+      "jogadores": {
+        "j01": {
+          "nome": "André Aster",
+          "posicao": "Atacante"
+        }
+      },
+      "comissaoTecnica": {
+        "ct01": {
+          "nome": "Bruno Técnico",
+          "cargo": "Técnico"
+        }
+      }
+    },
+    "hip": {
+      "nome": "Hipertrofolia",
+      "logoUrl": "/logos/hiper.jpg",
+      "pontos": 0,
+      "jogos": 0,
+      "vitorias": 0,
+      "empates": 0,
+      "derrotas": 0,
+      "golsPro": 0,
+      "golsContra": 0,
+      "descricao": "Time que combina força física com técnica apurada.",
+      "jogadores": {
+        "j01": {
+          "nome": "Hugo Hiper",
+          "posicao": "Atacante"
+        }
+      },
+      "comissaoTecnica": {
+        "ct01": {
+          "nome": "Carlos Técnico",
+          "cargo": "Técnico"
+        }
+      }
+    },
+    "ams": {
+      "nome": "Arena Mhp Sports",
+      "logoUrl": "/logos/arena-mhp.jpg",
+      "pontos": 0,
+      "jogos": 0,
+      "vitorias": 0,
+      "empates": 0,
+      "derrotas": 0,
+      "golsPro": 0,
+      "golsContra": 0,
+      "descricao": "Time que representa a excelência do futebol moderno.",
+      "jogadores": {
+        "j01": {
+          "nome": "Alex Arena",
+          "posicao": "Atacante"
+        }
+      },
+      "comissaoTecnica": {
+        "ct01": {
+          "nome": "Marcos Técnico",
+          "cargo": "Técnico"
+        }
+      }
+    },
+    "asa": {
+      "nome": "Asa",
+      "logoUrl": "/logos/asa.png",
+      "pontos": 0,
+      "jogos": 0,
+      "vitorias": 0,
+      "empates": 0,
+      "derrotas": 0,
+      "golsPro": 0,
+      "golsContra": 0,
+      "descricao": "Time que voa alto no futebol amador.",
+      "jogadores": {
+        "j01": {
+          "nome": "Alberto Asa",
+          "posicao": "Atacante"
+        }
+      },
+      "comissaoTecnica": {
+        "ct01": {
+          "nome": "Paulo Técnico",
+          "cargo": "Técnico"
+        }
+      }
+    },
+    "dem": {
+      "nome": "Demolidores",
+      "logoUrl": "/logos/demolidores.jpg",
+      "pontos": 0,
+      "jogos": 0,
+      "vitorias": 0,
+      "empates": 0,
+      "derrotas": 0,
+      "golsPro": 0,
+      "golsContra": 0,
+      "descricao": "Time conhecido por sua força e determinação.",
+      "jogadores": {
+        "j01": {
+          "nome": "Diego Demolidor",
+          "posicao": "Atacante"
+        }
+      },
+      "comissaoTecnica": {
+        "ct01": {
+          "nome": "Roberto Técnico",
+          "cargo": "Técnico"
+        }
+      }
+    },
+    "g29": {
+      "nome": "G29",
+      "logoUrl": "/logos/g29.jpeg",
+      "pontos": 0,
+      "jogos": 0,
+      "vitorias": 0,
+      "empates": 0,
+      "derrotas": 0,
+      "golsPro": 0,
+      "golsContra": 0,
+      "descricao": "Time que representa a nova geração do futebol.",
+      "jogadores": {
+        "j01": {
+          "nome": "Gabriel G29",
+          "posicao": "Atacante"
+        }
+      },
+      "comissaoTecnica": {
+        "ct01": {
+          "nome": "Gustavo Técnico",
+          "cargo": "Técnico"
+        }
+      }
+    },
+    "mag": {
+      "nome": "Magnatas",
+      "logoUrl": "/logos/magnatas.png",
+      "pontos": 0,
+      "jogos": 0,
+      "vitorias": 0,
+      "empates": 0,
+      "derrotas": 0,
+      "golsPro": 0,
+      "golsContra": 0,
+      "descricao": "Time que representa a elite do futebol amador.",
+      "jogadores": {
+        "j01": {
+          "nome": "Miguel Magnata",
+          "posicao": "Atacante"
+        }
+      },
+      "comissaoTecnica": {
+        "ct01": {
+          "nome": "Mário Técnico",
+          "cargo": "Técnico"
+        }
+      }
+    },
+    "azz": {
+      "nome": "Azzurra",
+      "logoUrl": "/logos/azzurra.jpg",
+      "pontos": 0,
+      "jogos": 0,
+      "vitorias": 0,
+      "empates": 0,
+      "derrotas": 0,
+      "golsPro": 0,
+      "golsContra": 0,
+      "descricao": "Time com estilo italiano de jogar.",
+      "jogadores": {
+        "j01": {
+          "nome": "Antonio Azzurra",
+          "posicao": "Atacante"
+        }
+      },
+      "comissaoTecnica": {
+        "ct01": {
+          "nome": "Alessandro Técnico",
+          "cargo": "Técnico"
+        }
+      }
+    },
+    "kwr": {
+      "nome": "KWR",
+      "logoUrl": "/logos/kwrlogo.jpg",
+      "pontos": 0,
+      "jogos": 0,
+      "vitorias": 0,
+      "empates": 0,
+      "derrotas": 0,
+      "golsPro": 0,
+      "golsContra": 0,
+      "descricao": "Time que representa a força do futebol moderno.",
+      "jogadores": {
+        "j01": {
+          "nome": "Kevin KWR",
+          "posicao": "Atacante"
+        }
+      },
+      "comissaoTecnica": {
+        "ct01": {
+          "nome": "Kleber Técnico",
+          "cargo": "Técnico"
+        }
+      }
+    },
+    "hor": {
+      "nome": "Hornets",
+      "logoUrl": "/logos/hornetslogo.jpg",
+      "pontos": 0,
+      "jogos": 0,
+      "vitorias": 0,
+      "empates": 0,
+      "derrotas": 0,
+      "golsPro": 0,
+      "golsContra": 0,
+      "descricao": "Time conhecido por sua velocidade e agilidade.",
+      "jogadores": {
+        "j01": {
+          "nome": "Henrique Hornet",
+          "posicao": "Atacante"
+        }
+      },
+      "comissaoTecnica": {
+        "ct01": {
+          "nome": "Hugo Técnico",
+          "cargo": "Técnico"
+        }
+      }
+    }
+  },
+  "partidas": {
+    "partida01": { "timeA": "fdq", "timeB": "vmt", "placarA": 1, "placarB": 1, "status": "Finalizado", "data": "2024-03-21T20:00:00" },
+    "partida02": { "timeA": "cfc", "timeB": "imp", "placarA": 0, "placarB": 0, "status": "Finalizado", "data": "2024-03-20T21:00:00" },
+    "partida03": { "timeA": "ver", "timeB": "amb", "placarA": 2, "placarB": 1, "status": "Finalizado", "data": "2024-03-20T20:00:00" }
+  },
+  "artilharia": {
+    "art01": { "nome": "Jogador A", "time": "Veracruz", "gols": 2 },
+    "art02": { "nome": "Jogador B", "time": "Fut D'Quinta", "gols": 1 },
+    "art03": { "nome": "Jogador C", "time": "Vila Marta", "gols": 1 },
+    "art04": { "nome": "Jogador D", "time": "Ambfoot", "gols": 1 }
+  }
+} 

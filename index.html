@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Cup</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="bg-neutral-900 min-h-screen text-white">
+
+    <div class="flex flex-col items-center p-4 md:p-8 lg:p-12 w-full">
+    <header class="w-full max-w-6xl text-center mb-10">
+            <img src="/img/royalcup-minimalistaLogo.jpg" alt="Logo Royal Cup" class="h-24 md:h-28 mx-auto">
+
+            <p class="text-lg md:text-xl text-gray-400 mt-4">Acompanhe os resultados e o progresso do seu time favorito!</p>
+    </header>
+
+        <section class="w-full max-w-6xl mb-12 overflow-hidden relative py-4">
+            <div id="team-carousel" class="flex">
+        </div>
+    </section>
+
+    <main class="w-full max-w-6xl p-4">
+            <section id="resultados-recentes" class="mb-12">
+                 <h2 class="text-4xl md:text-5xl font-extrabold text-primary-orange text-center mb-8">Resultados Recentes</h2>
+                 <div id="matches-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    </div>
+        </section>
+
+        <section id="artilharia" class="w-full p-4 mb-12">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-primary-orange text-center mb-8">Artilharia</h2>
+            <div class="bg-neutral-800 rounded-xl shadow-2xl p-6 border border-neutral-700">
+                    <ul id="artilharia-list" class="space-y-4">
+                </ul>
+            </div>
+        </section>
+
+        <section id="classificacao" class="w-full p-4 mb-12">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-primary-orange text-center mb-8">Classificação</h2>
+                <div class="bg-neutral-800 rounded-xl shadow-2xl border border-neutral-700 overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead class="bg-neutral-900">
+                            <tr>
+                                <th class="p-4 font-semibold">Pos</th>
+                                <th class="p-4 font-semibold">Time</th>
+                                <th class="p-4 font-semibold text-center">P</th>
+                                <th class="p-4 font-semibold text-center">J</th>
+                                <th class="p-4 font-semibold text-center">V</th>
+                                <th class="p-4 font-semibold text-center">E</th>
+                                <th class="p-4 font-semibold text-center">D</th>
+                                <th class="p-4 font-semibold text-center">GP</th>
+                                <th class="p-4 font-semibold text-center">GC</th>
+                                <th class="p-4 font-semibold text-center">SG</th>
+                        </tr>
+                    </thead>
+                        <tbody id="standings-body">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+        <footer class="text-center py-4 mt-8">
+            <p class="text-sm text-gray-400">© 2025 Royal Cup. Todos os direitos reservados.</p>
+    </footer>
+    </div>
+    <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

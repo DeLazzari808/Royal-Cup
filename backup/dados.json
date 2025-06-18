@@ -1,0 +1,30 @@
+{
+  "times": {
+    "ver": { "nome": "Veracruz", "logoUrl": "/logos/veracruz.jpg", "descricao": "...", "jogadores": {} },
+    "amb": { "nome": "Ambfoot", "logoUrl": "/logos/ambfoot.jpg", "descricao": "...", "jogadores": {} },
+    "cfc": { "nome": "Carecas FC", "logoUrl": "/logos/carecas-fc.jpeg", "descricao": "...", "jogadores": {} },
+    "imp": { "nome": "Imperial", "logoUrl": "/logos/imperial.jpg", "descricao": "...", "jogadores": {} },
+    "fdq": { "nome": "Fut D'Quinta", "logoUrl": "/logos/fut-d-quinta.jpg", "descricao": "...", "jogadores": {} },
+    "vmt": { "nome": "Vila Marta", "logoUrl": "/logos/vila-marta.jpeg", "descricao": "...", "jogadores": {} },
+    "tnk": { "nome": "Tanck", "logoUrl": "/logos/tanck-foot.png", "descricao": "...", "jogadores": {} },
+    "cmg": { "nome": "Cap Mil Grau", "logoUrl": "/logos/cap-mil-grau.jpg", "descricao": "...", "jogadores": {} },
+    "ast": { "nome": "Aster FC", "logoUrl": "/logos/aster.jpg", "descricao": "...", "jogadores": {} },
+    "hip": { "nome": "Hipertrofolia", "logoUrl": "/logos/hiper.jpg", "descricao": "...", "jogadores": {} },
+    "ams": { "nome": "Arena Mhp Sports", "logoUrl": "/logos/arena-mhp.jpg", "descricao": "...", "jogadores": {} },
+    "asa": { "nome": "Asa", "logoUrl": "/logos/asa.png", "descricao": "...", "jogadores": {} },
+    "dem": { "nome": "Demolidores", "logoUrl": "/logos/demolidores.jpg", "descricao": "...", "jogadores": {} },
+    "g29": { "nome": "G29", "logoUrl": "/logos/g29.jpeg", "descricao": "...", "jogadores": {} },
+    "mag": { "nome": "Magnatas", "logoUrl": "/logos/magnatas.png", "descricao": "...", "jogadores": {} },
+    "azz": { "nome": "Azzurra", "logoUrl": "/logos/azzurra.jpg", "descricao": "...", "jogadores": {} },
+    "kwr": { "nome": "KWR", "logoUrl": "/logos/kwrlogo.jpg", "descricao": "...", "jogadores": {} },
+    "hor": { "nome": "Hornets", "logoUrl": "/logos/hornetslogo.jpg", "descricao": "...", "jogadores": {} }
+  },
+  "partidas": {
+    "partida01": { "timeA": "fdq", "timeB": "vmt", "placarA": 1, "placarB": 1, "status": "Finalizado", "data": "2024-03-21T20:00:00" },
+    "partida02": { "timeA": "cfc", "timeB": "imp", "placarA": 0, "placarB": 0, "status": "Finalizado", "data": "2024-03-20T21:00:00" },
+    "partida03": { "timeA": "ver", "timeB": "amb", "placarA": 2, "placarB": 1, "status": "Finalizado", "data": "2024-03-20T20:00:00" }
+  },
+  "artilharia": {
+    "placeholder": { "nome": "A ser preenchido", "time": "N/A", "gols": 0 }
+  }
+} 

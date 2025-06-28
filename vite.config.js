@@ -1,8 +1,15 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // ESTA LINHA É A SOLUÇÃO DEFINITIVA
-  // Ela diz ao Vite para tratar esses arquivos como imagens, e não como código.
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        time: resolve(__dirname, 'time.html'),
+      },
+    },
+  },
   assetsInclude: ['**/*.JPG', '**/*.jpeg', '**/*.png', '**/*.jpg'],
 });

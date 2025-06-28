@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     "./index.html",
-    "./public/time.html",
+    "./time.html", // Caminho atualizado
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {

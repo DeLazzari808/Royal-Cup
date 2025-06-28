@@ -54,55 +54,70 @@ function loadTeamsCarousel(teamsData) {
 }
 
 /**
- * Preenche a seção de resultados de partidas.
+ * Preenche a seção de próximas partidas.
  * @param {object} matchesData - Os dados das partidas.
  * @param {object} teamsData - Os dados dos times para consulta.
  */
-function loadMatches(matchesData, teamsData) {
+function loadUpcomingMatches(matchesData, teamsData) {
     const container = document.getElementById('matches-container');
-    if (!container) return;
-    
+    const title = document.getElementById('matches-title');
+    if (!container || !title) return;
+
     if (!matchesData || !teamsData) {
-        container.innerHTML = '<p class="col-span-full text-center text-gray-400">Nenhuma partida recente encontrada.</p>';
+        title.textContent = 'Nenhuma partida agendada';
+        container.innerHTML = '';
         return;
     }
-    
-    container.innerHTML = '';
-    const sortedMatches = Object.values(matchesData).sort((a, b) => new Date(b.data) - new Date(a.data));
-    
-    sortedMatches.forEach(match => {
-        const teamA = teamsData[match.timeA];
-        const teamB = teamsData[match.timeB];
-        const logoSrcA = logoMap[match.timeA];
-        const logoSrcB = logoMap[match.timeB];
 
-        if (teamA && teamB && logoSrcA && logoSrcB) {
-            container.innerHTML += `
-                <div class="bg-neutral-800 rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out border border-neutral-700">
-                    <div class="p-3 bg-neutral-900 flex justify-between items-center text-sm font-medium text-gray-400 border-b border-neutral-700">
-                        <span>${new Date(match.data).toLocaleDateString('pt-BR')}</span>
-                        <span class="font-bold text-white uppercase">${match.status}</span>
-                    </div>
-                    <div class="flex items-center justify-around p-6">
-                        <a href="/time.html?id=${match.timeA}" class="flex flex-col items-center text-center w-28">
-                            <img src="${logoSrcA}" alt="${teamA.nome}" class="w-20 h-20 rounded-full object-cover border-2 border-neutral-700 mb-2">
-                            <span class="text-lg font-bold text-white truncate w-full">${teamA.nome}</span>
-                        </a>
-                        <div class="flex items-center justify-center text-4xl md:text-5xl font-extrabold">
-                            <span class="text-primary-orange">${match.placarA}</span>
-                            <span class="mx-3 text-gray-500">-</span>
-                            <span class="text-primary-orange">${match.placarB}</span>
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const upcomingMatches = Object.values(matchesData)
+        .filter(match => new Date(match.data) >= today && match.status === 'Agendado')
+        .sort((a, b) => new Date(a.data) - new Date(b.data));
+
+    if (upcomingMatches.length > 0) {
+        const firstMatchDate = new Date(upcomingMatches[0].data);
+        const dateOptions = { day: '2-digit', month: 'long' };
+        title.textContent = `Partidas - ${firstMatchDate.toLocaleDateString('pt-BR', dateOptions)}`;
+        
+        container.innerHTML = '';
+        upcomingMatches.forEach(match => {
+            const teamA = teamsData[match.timeA];
+            const teamB = teamsData[match.timeB];
+            const logoSrcA = logoMap[match.timeA];
+            const logoSrcB = logoMap[match.timeB];
+
+            if (teamA && teamB && logoSrcA && logoSrcB) {
+                container.innerHTML += `
+                    <div class="bg-neutral-800 rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out border border-neutral-700">
+                        <div class="p-3 bg-neutral-900 flex justify-between items-center text-sm font-medium text-gray-400 border-b border-neutral-700">
+                            <span>${new Date(match.data).toLocaleDateString('pt-BR', {weekday: 'long'})}</span>
+                            <span class="font-bold text-white uppercase">${new Date(match.data).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}</span>
                         </div>
-                        <a href="/time.html?id=${match.timeB}" class="flex flex-col items-center text-center w-28">
-                            <img src="${logoSrcB}" alt="${teamB.nome}" class="w-20 h-20 rounded-full object-cover border-2 border-neutral-700 mb-2">
-                            <span class="text-lg font-bold text-white truncate w-full">${teamB.nome}</span>
-                        </a>
+                        <div class="flex items-center justify-around p-6">
+                            <a href="/time.html?id=${match.timeA}" class="flex flex-col items-center text-center w-28">
+                                <img src="${logoSrcA}" alt="${teamA.nome}" class="w-20 h-20 rounded-full object-cover border-2 border-neutral-700 mb-2">
+                                <span class="text-lg font-bold text-white truncate w-full">${teamA.nome}</span>
+                            </a>
+                            <div class="flex items-center justify-center text-4xl md:text-5xl font-extrabold">
+                                <span class="mx-3 text-gray-500">VS</span>
+                            </div>
+                            <a href="/time.html?id=${match.timeB}" class="flex flex-col items-center text-center w-28">
+                                <img src="${logoSrcB}" alt="${teamB.nome}" class="w-20 h-20 rounded-full object-cover border-2 border-neutral-700 mb-2">
+                                <span class="text-lg font-bold text-white truncate w-full">${teamB.nome}</span>
+                            </a>
+                        </div>
                     </div>
-                </div>
-            `;
-        }
-    });
+                `;
+            }
+        });
+    } else {
+        title.textContent = 'Nenhuma partida agendada';
+        container.innerHTML = '<p class="col-span-full text-center text-gray-400">Volte mais tarde para conferir os próximos jogos.</p>';
+    }
 }
+
 
 /**
  * Preenche a lista de artilheiros.
@@ -183,7 +198,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (allData) {
         // Passa para cada função a parte do 'bancão' de dados que ela precisa
         loadTeamsCarousel(allData.times);
-        loadMatches(allData.partidas, allData.times);
+        loadUpcomingMatches(allData.partidas, allData.times);
         loadTopScorers(allData.artilharia);
         loadStandings(allData.times);
     }

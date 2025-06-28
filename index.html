@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,39 +7,82 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
-<body class="bg-neutral-900 min-h-screen text-white">
+<body class="bg-neutral-900 min-h-screen text-white font-sans">
+
+    <nav class="bg-neutral-900/80 backdrop-blur-sm shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="/index.html" class="flex items-center py-4 px-2">
+                            <img src="/img/royalcup-minimalistaLogo.jpg" alt="Logo" class="h-8 w-8 mr-2">
+                            <span class="font-semibold text-white text-lg">Royal Cup</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="/index.html" class="py-4 px-2 text-primary-orange border-b-4 border-primary-orange font-semibold">Home</a>
+                        <a href="#classificacao" class="py-4 px-2 text-gray-300 font-semibold hover:text-primary-orange transition duration-300">Classificação</a>
+                        <a href="#artilharia" class="py-4 px-2 text-gray-300 font-semibold hover:text-primary-orange transition duration-300">Artilharia</a>
+                        <a href="#times" class="py-4 px-2 text-gray-300 font-semibold hover:text-primary-orange transition duration-300">Times</a>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                    <svg class=" w-6 h-6 text-gray-300 hover:text-primary-orange "
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden mobile-menu">
+            <ul class="">
+                <li><a href="/index.html" class="block text-sm px-2 py-4 text-white bg-primary-orange font-semibold">Home</a></li>
+                <li><a href="#classificacao" class="block text-sm px-2 py-4 hover:bg-primary-orange-dark transition duration-300">Classificação</a></li>
+                <li><a href="#artilharia" class="block text-sm px-2 py-4 hover:bg-primary-orange-dark transition duration-300">Artilharia</a></li>
+                <li><a href="#times" class="block text-sm px-2 py-4 hover:bg-primary-orange-dark transition duration-300">Times</a></li>
+            </ul>
+        </div>
+    </nav>
+
 
     <div class="flex flex-col items-center p-4 md:p-8 lg:p-12 w-full">
-    <header class="w-full max-w-6xl text-center mb-10">
-            <img src="/img/royalcup-minimalistaLogo.jpg" alt="Logo Royal Cup" class="h-24 md:h-28 mx-auto">
-
+        <header class="w-full max-w-6xl text-center my-10">
+            <h1 class="text-5xl font-extrabold text-white">Bem-vindo à <span class="text-primary-orange">Royal Cup</span></h1>
             <p class="text-lg md:text-xl text-gray-400 mt-4">Acompanhe os resultados e o progresso do seu time favorito!</p>
-    </header>
+        </header>
 
-        <section class="w-full max-w-6xl mb-12 overflow-hidden relative py-4">
+        <section id="times" class="w-full max-w-6xl mb-12 overflow-hidden relative py-4">
             <div id="team-carousel" class="flex">
-        </div>
-    </section>
+                </div>
+        </section>
 
-    <main class="w-full max-w-6xl p-4">
-            <section id="resultados-recentes" class="mb-12">
-                 <h2 class="text-4xl md:text-5xl font-extrabold text-primary-orange text-center mb-8">Resultados Recentes</h2>
+        <main class="w-full max-w-6xl p-4">
+            <section id="proximas-partidas" class="mb-12">
+                 <h2 id="matches-title" class="text-4xl md:text-5xl font-extrabold text-primary-orange text-center mb-8">Próximas Partidas</h2>
                  <div id="matches-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     </div>
-        </section>
+            </section>
 
-        <section id="artilharia" class="w-full p-4 mb-12">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-primary-orange text-center mb-8">Artilharia</h2>
-            <div class="bg-neutral-800 rounded-xl shadow-2xl p-6 border border-neutral-700">
+            <section id="artilharia" class="w-full p-4 mb-12">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-primary-orange text-center mb-8">Artilharia</h2>
+                <div class="bg-neutral-800 rounded-xl shadow-2xl p-6 border border-neutral-700">
                     <ul id="artilharia-list" class="space-y-4">
-                </ul>
-            </div>
-        </section>
+                        </ul>
+                </div>
+            </section>
 
-        <section id="classificacao" class="w-full p-4 mb-12">
+            <section id="classificacao" class="w-full p-4 mb-12">
                 <h2 class="text-4xl md:text-5xl font-extrabold text-primary-orange text-center mb-8">Classificação</h2>
                 <div class="bg-neutral-800 rounded-xl shadow-2xl border border-neutral-700 overflow-x-auto">
                     <table class="w-full text-left">
@@ -55,19 +98,28 @@
                                 <th class="p-4 font-semibold text-center">GP</th>
                                 <th class="p-4 font-semibold text-center">GC</th>
                                 <th class="p-4 font-semibold text-center">SG</th>
-                        </tr>
-                    </thead>
+                            </tr>
+                        </thead>
                         <tbody id="standings-body">
-                    </tbody>
-                </table>
-            </div>
-        </section>
-    </main>
+                            </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
 
         <footer class="text-center py-4 mt-8">
             <p class="text-sm text-gray-400">© 2025 Royal Cup. Todos os direitos reservados.</p>
-    </footer>
+        </footer>
     </div>
+
+    <script>
+        const btn = document.querySelector("button.mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
     <script type="module" src="/src/js/main.js"></script>
 </body>
 </html>

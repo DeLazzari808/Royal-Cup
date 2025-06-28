@@ -453,14 +453,22 @@
     }
   },
   "partidas": {
-    "partida01": { "timeA": "fdq", "timeB": "vmt", "placarA": 1, "placarB": 1, "status": "Finalizado", "data": "2024-03-21T20:00:00" },
-    "partida02": { "timeA": "cfc", "timeB": "imp", "placarA": 0, "placarB": 0, "status": "Finalizado", "data": "2024-03-20T21:00:00" },
-    "partida03": { "timeA": "ver", "timeB": "amb", "placarA": 2, "placarB": 1, "status": "Finalizado", "data": "2024-03-20T20:00:00" }
+    "partida01": { "data": "2025-06-29T13:00:00", "status": "Agendado", "timeA": "tnk", "timeB": "imp" },
+    "partida02": { "data": "2025-06-29T14:00:00", "status": "Agendado", "timeA": "hip", "timeB": "amb" },
+    "partida03": { "data": "2025-06-29T15:00:00", "status": "Agendado", "timeA": "g29", "timeB": "azz" },
+    "partida04": { "data": "2025-06-29T16:00:00", "status": "Agendado", "timeA": "ver", "timeB": "psg" },
+    "partida05": { "data": "2025-06-29T17:00:00", "status": "Agendado", "timeA": "naj", "timeB": "vmt" },
+    "partida06": { "data": "2025-06-29T18:00:00", "status": "Agendado", "timeA": "maf", "timeB": "ast" },
+    "partida07": { "data": "2025-06-29T19:00:00", "status": "Agendado", "timeA": "psg", "timeB": "dem" },
+    "partida08": { "data": "2025-06-29T20:00:00", "status": "Agendado", "timeA": "kwr", "timeB": "fdq" },
+    "partida09": { "data": "2025-06-29T21:00:00", "status": "Agendado", "timeA": "cfc", "timeB": "hor" },
+    "partida10": { "data": "2025-06-29T22:00:00", "status": "Agendado", "timeA": "asa", "timeB": "rep" }
   },
   "artilharia": {
-    "art01": { "nome": "Jogador A", "time": "Veracruz", "gols": 2 },
-    "art02": { "nome": "Jogador B", "time": "Fut D'Quinta", "gols": 1 },
-    "art03": { "nome": "Jogador C", "time": "Vila Marta", "gols": 1 },
-    "art04": { "nome": "Jogador D", "time": "Ambfoot", "gols": 1 }
+    "art01": {
+      "gols": 0,
+      "nome": "A Definir",
+      "time": ""
+    }
   }
 } 

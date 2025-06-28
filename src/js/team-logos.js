@@ -19,6 +19,10 @@ import magnatasLogo from '../assets/LOGOS/magnatas.png';
 import azzurraLogo from '../assets/LOGOS/azzurra.jpg';
 import kwrLogo from '../assets/LOGOS/kwrlogo.jpg';
 import hornetsLogo from '../assets/LOGOS/hornetslogo.jpg';
+import mafiaLogo from '../assets/LOGOS/mafia.jpg'; 
+import parisnaguaLogo from '../assets/LOGOS/parisnagua.png';
+import repetilicosLogo from '../assets/LOGOS/repeticos.jpg';
+import najosLogo from '../assets/LOGOS/najos.jpg'; // Adicione o logo do Najos aqui
 
 // Crie um "mapa" que associa a sigla do time ao logo importado
 export const logoMap = {
@@ -40,4 +44,8 @@ export const logoMap = {
   azz: azzurraLogo,
   kwr: kwrLogo,
   hor: hornetsLogo,
-}; 
+  maf: mafiaLogo,
+  psg: parisnaguaLogo,
+  rep: repetilicosLogo,
+  naj: najosLogo, // Novo time
+};

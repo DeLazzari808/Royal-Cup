@@ -30,62 +30,7 @@ Este projeto foi construído utilizando um stack de tecnologias modernas, visand
     * **Firebase Realtime Database:** Utilizado como banco de dados NoSQL para armazenamento e sincronização de dados em tempo real.
     * **Firebase Hosting:** Plataforma de hospedagem para deploy contínuo, com suporte a canais de preview e alta performance global.
 
-## 🚀 Instalação e Configuração
 
-### Pré-requisitos
-
-- Node.js (versão 16 ou superior)
-- npm ou yarn
-- Conta no Firebase
-
-### Passos para instalação
-
-1. **Clone o repositório**
-   ```bash
-   git clone https://github.com/seu-usuario/royal-cup-site.git
-   cd royal-cup-site
-   ```
-
-2. **Instale as dependências**
-   ```bash
-   npm install
-   ```
-
-3. **Configure as variáveis de ambiente**
-   ```bash
-   # Copie o arquivo de exemplo
-   cp env.example .env
-   
-   # Edite o arquivo .env com suas credenciais do Firebase
-   ```
-
-4. **Configure o Firebase**
-   - Crie um projeto no [Firebase Console](https://console.firebase.google.com/)
-   - Ative o Realtime Database
-   - Copie as credenciais do projeto para o arquivo `.env`
-
-5. **Execute o projeto**
-   ```bash
-   # Para desenvolvimento
-   npm run dev
-   
-   # Para build de produção
-   npm run build
-   ```
-
-### Estrutura do Projeto
-
-```
-royal-cup-site/
-├── src/
-│   ├── js/           # JavaScript principal
-│   ├── css/          # Estilos CSS
-│   └── assets/       # Imagens e recursos
-├── dados_csv/        # Arquivos CSV com dados dos times
-├── config/           # Configurações do Firebase
-├── public/           # Arquivos públicos
-└── dist/             # Build de produção (gerado automaticamente)
-```
 
 ## 📜 Licença
 

@@ -12,78 +12,57 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body class="bg-neutral-900 text-white flex flex-col min-h-screen font-sans">
-    
     <div class="page-banner"></div>
-
-    <div class="relative z-10">
-        <nav class="bg-neutral-900/80 backdrop-blur-sm shadow-lg sticky top-0">
-            <div class="max-w-6xl mx-auto px-4">
-                <div class="flex justify-between">
-                    <div class="flex space-x-7">
-                        <div>
-                            <a href="/index.html" class="flex items-center py-4 px-2">
-                                <img src="/img/royalcup-minimalistaLogo.jpg" alt="Logo" class="h-8 w-8 mr-2">
-                                <span class="font-semibold text-white text-lg">Royal Cup</span>
+    <div class="relative z-10 flex flex-col min-h-screen">
+        <nav class="bg-neutral-900/80 backdrop-blur-sm shadow-lg sticky top-0 z-50"><div class="max-w-6xl mx-auto px-4"><div class="flex justify-between"><div class="flex space-x-7"><div><a href="/index.html" class="flex items-center py-4 px-2"><img src="/img/royalcup-minimalistaLogo.jpg" alt="Logo" class="h-8 w-8 mr-2"><span class="font-semibold text-white text-lg">Royal Cup</span></a></div><div class="hidden md:flex items-center space-x-1"><a href="/index.html" class="py-4 px-2 text-gray-300 font-semibold hover:text-primary-orange transition duration-300">Home</a><a href="/index.html#classificacao" class="py-4 px-2 text-gray-300 font-semibold hover:text-primary-orange transition duration-300">Classificação</a><a href="/mata-mata.html" class="py-4 px-2 text-gray-300 font-semibold hover:text-primary-orange transition duration-300">Mata-Mata</a><a href="/teams.html" class="py-4 px-2 text-primary-orange border-b-4 border-primary-orange font-semibold">Times</a></div></div><div class="md:hidden flex items-center"><button class="outline-none mobile-menu-button"><svg class=" w-6 h-6 text-gray-300 hover:text-primary-orange " fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button></div></div></div><div class="hidden mobile-menu"><ul><li><a href="/index.html" class="block text-sm px-2 py-4 hover:bg-primary-orange-dark transition duration-300">Home</a></li><li><a href="/index.html#classificacao" class="block text-sm px-2 py-4 hover:bg-primary-orange-dark transition duration-300">Classificação</a></li><li><a href="/mata-mata.html" class="block text-sm px-2 py-4 hover:bg-primary-orange-dark transition duration-300">Mata-Mata</a></li><li><a href="/teams.html" class="block text-sm px-2 py-4 hover:bg-primary-orange-dark transition duration-300">Times</a></li></ul></div></nav>
+        <header id="team-header" class="w-full text-center flex flex-col items-center opacity-0 transition-opacity duration-500 pt-12 pb-8"><div class="relative mb-4"><img id="team-logo" src="" alt="Logo do Time" class="h-32 w-32 md:h-40 md:w-40 object-contain rounded-full border-4 border-primary-orange shadow-lg" /></div><h1 id="team-name" class="text-4xl md:text-6xl font-extrabold text-primary-orange">Carregando...</h1><p id="team-description" class="mt-2 text-lg text-neutral-300 max-w-2xl"></p><div id="team-socials" class="mt-4"></div></header>
+        <main class="w-full max-w-6xl mx-auto p-4 flex-grow"><section id="team-stats" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center my-8 bg-neutral-800 p-4 rounded-xl border border-neutral-700"></section><div id="coaching-staff-section" class="bg-neutral-800/50 p-6 rounded-2xl shadow-xl border border-neutral-700 mb-8 hidden"><h2 class="text-3xl font-extrabold text-primary-orange mb-8 border-b-2 border-primary-orange/30 pb-4">Comissão Técnica</h2><div id="coach-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-10"></div></div><div class="bg-neutral-800/50 p-6 rounded-2xl shadow-xl border border-neutral-700"><h2 class="text-3xl font-extrabold text-primary-orange mb-8 border-b-2 border-primary-orange/30 pb-4">Elenco</h2><section id="player-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-10"><p id="loading-players" class="col-span-full text-center text-gray-400">Carregando elenco...</p></section></div></main>
+        <footer class="bg-neutral-800 border-t border-neutral-700 mt-16 py-8">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="flex flex-col items-center md:items-start">
+                        <a href="/index.html" class="flex items-center">
+                            <img src="/img/royalcup-minimalistaLogo.jpg" alt="Logo" class="h-12 w-12 mr-3">
+                            <span class="font-extrabold text-white text-2xl">Royal Cup</span>
+                        </a>
+                        <div class="flex space-x-4 mt-4">
+                            <a href="https://www.instagram.com/royalcupbr/" target="_blank" rel="noopener" class="text-neutral-400 hover:text-primary-orange transition-colors">
+                                <i class="ph-bold ph-instagram-logo text-3xl"></i>
                             </a>
                         </div>
-                        <div class="hidden md:flex items-center space-x-1">
-                            <a href="/index.html" class="py-4 px-2 text-gray-300 font-semibold hover:text-primary-orange transition duration-300">Home</a>
-                            <a href="/index.html#classificacao" class="py-4 px-2 text-gray-300 font-semibold hover:text-primary-orange transition duration-300">Classificação</a>
-                            <a href="/mata-mata.html" class="py-4 px-2 text-gray-300 font-semibold hover:text-primary-orange transition duration-300">Mata-Mata</a>
-                            <a href="/teams.html" class="py-4 px-2 text-primary-orange border-b-4 border-primary-orange font-semibold">Times</a>
-                        </div>
                     </div>
-                    <div class="md:hidden flex items-center">
-                        <button class="outline-none mobile-menu-button">
-                            <svg class=" w-6 h-6 text-gray-300 hover:text-primary-orange " fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                        </button>
+
+                    <div>
+                        <h3 class="font-bold text-white mb-4">Navegação</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/index.html" class="text-neutral-400 hover:text-primary-orange">Home</a></li>
+                            <li><a href="/index.html#classificacao" class="text-neutral-400 hover:text-primary-orange">Classificação</a></li>
+                            <li><a href="/mata-mata.html" class="text-neutral-400 hover:text-primary-orange">Mata-Mata</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold text-white mb-4">Equipes</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/teams.html" class="text-neutral-400 hover:text-primary-orange">Ver Todos os Times</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold text-white mb-4">Suporte</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-neutral-400 hover:text-primary-orange">Regulamento</a></li>
+                            <li><a href="#" class="text-neutral-400 hover:text-primary-orange">Contato</a></li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-            <div class="hidden mobile-menu">
-                <ul>
-                    <li><a href="/index.html" class="block text-sm px-2 py-4 hover:bg-primary-orange-dark transition duration-300">Home</a></li>
-                    <li><a href="/index.html#classificacao" class="block text-sm px-2 py-4 hover:bg-primary-orange-dark transition duration-300">Classificação</a></li>
-                    <li><a href="/mata-mata.html" class="block text-sm px-2 py-4 hover:bg-primary-orange-dark transition duration-300">Mata-Mata</a></li>
-                    <li><a href="/teams.html" class="block text-sm px-2 py-4 text-white bg-primary-orange font-semibold">Times</a></li>
-                </ul>
-            </div>
-        </nav>
 
-        <header id="team-header" class="w-full text-center flex flex-col items-center opacity-0 transition-opacity duration-500 pt-12 pb-8">
-            <div class="relative mb-4">
-                <img id="team-logo" src="" alt="Logo do Time" class="h-32 w-32 md:h-40 md:w-40 object-contain rounded-full border-4 border-primary-orange shadow-lg" />
+                <div class="border-t border-neutral-700 mt-8 pt-6 text-center text-neutral-500 text-sm">
+                    <p>&copy; 2025 Royal Cup. Todos os direitos reservados.</p>
+                </div>
             </div>
-            <h1 id="team-name" class="text-4xl md:text-6xl font-extrabold text-primary-orange">Carregando...</h1>
-            <p id="team-description" class="mt-2 text-lg text-neutral-300 max-w-2xl"></p>
-        </header>
-
-        <main class="w-full max-w-6xl mx-auto p-4 flex-grow">
-            <section id="team-stats" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center my-8 bg-neutral-800 p-4 rounded-xl border border-neutral-700"></section>
-
-            <div id="coaching-staff-section" class="bg-neutral-800/50 p-6 rounded-2xl shadow-xl border border-neutral-700 mb-8 hidden">
-                <h2 class="text-3xl font-extrabold text-primary-orange mb-8 border-b-2 border-primary-orange/30 pb-4">Comissão Técnica</h2>
-                <div id="coach-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-10"></div>
-            </div>
-            
-            <div class="bg-neutral-800/50 p-6 rounded-2xl shadow-xl border border-neutral-700">
-                <h2 class="text-3xl font-extrabold text-primary-orange mb-8 border-b-2 border-primary-orange/30 pb-4">Elenco</h2>
-                <section id="player-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-10">
-                    <p id="loading-players" class="col-span-full text-center text-gray-400">Carregando elenco...</p>
-                </section>
-            </div>
-        </main>
-
-        <footer class="w-full p-6 text-center text-neutral-400 mt-12">
-            <a href="/index.html" class="inline-block bg-primary-orange text-black font-bold py-3 px-6 rounded-lg hover:bg-primary-orange-dark transition-transform transform hover:-translate-y-1 shadow-lg">← Voltar para o Campeonato</a>
-            <p class="mt-8 text-sm">&copy; 2025 Royal Cup. Todos os direitos reservados.</p>
         </footer>
     </div>
-    <script>
-        const btn = document.querySelector("button.mobile-menu-button");
-        const menu = document.querySelector(".mobile-menu");
-        btn.addEventListener("click", () => { menu.classList.toggle("hidden"); });
-    </script>
-    <script type="module" src="/src/js/time.js"></script>
+    <script>const btn=document.querySelector("button.mobile-menu-button"),menu=document.querySelector(".mobile-menu");btn.addEventListener("click",()=>{menu.classList.toggle("hidden")});</script><script type="module" src="/src/js/time.js"></script>
 </body>
 </html>

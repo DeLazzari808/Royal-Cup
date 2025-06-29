@@ -16,7 +16,6 @@ import asaLogo from '../assets/LOGOS/asa.png';
 import demolidoresLogo from '../assets/LOGOS/demolidores.jpg';
 import g29Logo from '../assets/LOGOS/g29.jpeg';
 import magnatasLogo from '../assets/LOGOS/magnatas.png';
-import azzurraLogo from '../assets/LOGOS/azzurra.jpg';
 import kwrLogo from '../assets/LOGOS/kwrlogo.jpg';
 import hornetsLogo from '../assets/LOGOS/hornetslogo.jpg';
 import mafiaLogo from '../assets/LOGOS/mafia.jpg';
@@ -42,7 +41,6 @@ export const logoMap = {
   dem: demolidoresLogo,
   g29: g29Logo,
   mag: magnatasLogo,
-  azz: azzurraLogo,
   kwr: kwrLogo,
   hor: hornetsLogo,
   maf: mafiaLogo,

@@ -1,74 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="h-full">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Times | Royal Cup</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/css/style.css" />
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Times | Royal Cup</title><link rel="icon" href="/favicon.ico" type="image/x-icon" /><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/src/css/style.css" /><script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body class="bg-neutral-900 text-white flex flex-col min-h-screen font-sans">
-
     <div class="page-banner"></div>
-
-    <div class="relative z-10">
-        <nav class="bg-neutral-900/80 backdrop-blur-sm shadow-lg sticky top-0">
-            <div class="max-w-6xl mx-auto px-4">
-                <div class="flex justify-between">
-                    <div class="flex space-x-7">
-                        <div>
-                            <a href="/index.html" class="flex items-center py-4 px-2">
-                                <img src="/img/royalcup-minimalistaLogo.jpg" alt="Logo" class="h-8 w-8 mr-2">
-                                <span class="font-semibold text-white text-lg">Royal Cup</span>
+    <div class="relative z-10 flex flex-col min-h-screen">
+        <nav class="bg-neutral-900/80 backdrop-blur-sm shadow-lg sticky top-0 z-50"><div class="max-w-6xl mx-auto px-4"><div class="flex justify-between"><div class="flex space-x-7"><div><a href="/index.html" class="flex items-center py-4 px-2"><img src="/img/royalcup-minimalistaLogo.jpg" alt="Logo" class="h-8 w-8 mr-2"><span class="font-semibold text-white text-lg">Royal Cup</span></a></div><div class="hidden md:flex items-center space-x-1"><a href="/index.html" class="py-4 px-2 text-gray-300 font-semibold hover:text-primary-orange transition duration-300">Home</a><a href="/index.html#classificacao" class="py-4 px-2 text-gray-300 font-semibold hover:text-primary-orange transition duration-300">Classificação</a><a href="/mata-mata.html" class="py-4 px-2 text-gray-300 font-semibold hover:text-primary-orange transition duration-300">Mata-Mata</a><a href="/teams.html" class="py-4 px-2 text-primary-orange border-b-4 border-primary-orange font-semibold">Times</a></div></div><div class="md:hidden flex items-center"><button class="outline-none mobile-menu-button"><svg class=" w-6 h-6 text-gray-300 hover:text-primary-orange " fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button></div></div></div><div class="hidden mobile-menu"><ul><li><a href="/index.html" class="block text-sm px-2 py-4 hover:bg-primary-orange-dark transition duration-300">Home</a></li><li><a href="/index.html#classificacao" class="block text-sm px-2 py-4 hover:bg-primary-orange-dark transition duration-300">Classificação</a></li><li><a href="/mata-mata.html" class="block text-sm px-2 py-4 hover:bg-primary-orange-dark transition duration-300">Mata-Mata</a></li><li><a href="/teams.html" class="block text-sm px-2 py-4 text-white bg-primary-orange font-semibold">Times</a></li></ul></div></nav>
+        <main class="w-full max-w-7xl mx-auto p-4 md:p-8 flex-grow"><header class="text-center mb-10 pt-8"><h1 class="text-5xl font-extrabold text-white">Nossos <span class="text-primary-orange">Times</span></h1><p class="text-lg text-gray-400 mt-2">Conheça todas as equipes que disputam o título da Royal Cup.</p></header><section id="teams-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"></section></main>
+        <footer class="bg-neutral-800 border-t border-neutral-700 mt-16 py-8">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="flex flex-col items-center md:items-start">
+                        <a href="/index.html" class="flex items-center">
+                            <img src="/img/royalcup-minimalistaLogo.jpg" alt="Logo" class="h-12 w-12 mr-3">
+                            <span class="font-extrabold text-white text-2xl">Royal Cup</span>
+                        </a>
+                        <div class="flex space-x-4 mt-4">
+                            <a href="https://www.instagram.com/royalcupbr/" target="_blank" rel="noopener" class="text-neutral-400 hover:text-primary-orange transition-colors">
+                                <i class="ph-bold ph-instagram-logo text-3xl"></i>
                             </a>
                         </div>
-                        <div class="hidden md:flex items-center space-x-1">
-                            <a href="/index.html" class="py-4 px-2 text-gray-300 font-semibold hover:text-primary-orange transition duration-300">Home</a>
-                            <a href="/index.html#classificacao" class="py-4 px-2 text-gray-300 font-semibold hover:text-primary-orange transition duration-300">Classificação</a>
-                            <a href="/mata-mata.html" class="py-4 px-2 text-gray-300 font-semibold hover:text-primary-orange transition duration-300">Mata-Mata</a>
-                            <a href="/teams.html" class="py-4 px-2 text-primary-orange border-b-4 border-primary-orange font-semibold">Times</a>
-                        </div>
                     </div>
-                    <div class="md:hidden flex items-center">
-                        <button class="outline-none mobile-menu-button">
-                            <svg class=" w-6 h-6 text-gray-300 hover:text-primary-orange " fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                        </button>
+
+                    <div>
+                        <h3 class="font-bold text-white mb-4">Navegação</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/index.html" class="text-neutral-400 hover:text-primary-orange">Home</a></li>
+                            <li><a href="/index.html#classificacao" class="text-neutral-400 hover:text-primary-orange">Classificação</a></li>
+                            <li><a href="/mata-mata.html" class="text-neutral-400 hover:text-primary-orange">Mata-Mata</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold text-white mb-4">Equipes</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/teams.html" class="text-neutral-400 hover:text-primary-orange">Ver Todos os Times</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold text-white mb-4">Suporte</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-neutral-400 hover:text-primary-orange">Regulamento</a></li>
+                            <li><a href="#" class="text-neutral-400 hover:text-primary-orange">Contato</a></li>
+                        </ul>
                     </div>
                 </div>
+
+                <div class="border-t border-neutral-700 mt-8 pt-6 text-center text-neutral-500 text-sm">
+                    <p>&copy; 2025 Royal Cup. Todos os direitos reservados.</p>
+                </div>
             </div>
-            <div class="hidden mobile-menu">
-                <ul>
-                    <li><a href="/index.html" class="block text-sm px-2 py-4 hover:bg-primary-orange-dark transition duration-300">Home</a></li>
-                    <li><a href="/index.html#classificacao" class="block text-sm px-2 py-4 hover:bg-primary-orange-dark transition duration-300">Classificação</a></li>
-                    <li><a href="/mata-mata.html" class="block text-sm px-2 py-4 hover:bg-primary-orange-dark transition duration-300">Mata-Mata</a></li>
-                    <li><a href="/teams.html" class="block text-sm px-2 py-4 text-white bg-primary-orange font-semibold">Times</a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <main class="w-full max-w-7xl mx-auto p-4 md:p-8 flex-grow">
-            <header class="text-center mb-10 pt-8">
-                <h1 class="text-5xl font-extrabold text-white">Nossos <span class="text-primary-orange">Times</span></h1>
-                <p class="text-lg text-gray-400 mt-2">Conheça todas as equipes que disputam o título da Royal Cup.</p>
-            </header>
-
-            <section id="teams-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"></section>
-        </main>
-
-        <footer class="w-full p-6 text-center text-neutral-400 mt-12">
-            <a href="/index.html" class="inline-block bg-primary-orange text-black font-bold py-3 px-6 rounded-lg hover:bg-primary-orange-dark transition-transform transform hover:-translate-y-1 shadow-lg">← Voltar para o Início</a>
-            <p class="mt-8 text-sm">&copy; 2025 Royal Cup. Todos os direitos reservados.</p>
         </footer>
     </div>
-    
-    <script>
-        const btn = document.querySelector("button.mobile-menu-button");
-        const menu = document.querySelector(".mobile-menu");
-        btn.addEventListener("click", () => { menu.classList.toggle("hidden"); });
-    </script>
-    <script type="module" src="/src/js/teams.js"></script>
+    <script>const btn=document.querySelector("button.mobile-menu-button"),menu=document.querySelector(".mobile-menu");btn.addEventListener("click",()=>{menu.classList.toggle("hidden")});</script><script type="module" src="/src/js/teams.js"></script>
 </body>
 </html>

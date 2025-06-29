@@ -1,3 +1,5 @@
+// vite.config.js
+
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
@@ -8,6 +10,9 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         time: resolve(__dirname, 'time.html'),
+        matamata: resolve(__dirname, 'mata-mata.html'),
+        // Adicionada a nova página de times
+        teams: resolve(__dirname, 'teams.html'),
       },
     },
   },

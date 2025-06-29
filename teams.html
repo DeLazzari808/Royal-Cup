@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Time | Royal Cup</title>
+    <title>Times | Royal Cup</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/css/style.css" />
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body class="bg-neutral-900 text-white flex flex-col min-h-screen font-sans">
-    
+
     <div class="page-banner"></div>
 
     <div class="relative z-10">
@@ -50,40 +49,26 @@
             </div>
         </nav>
 
-        <header id="team-header" class="w-full text-center flex flex-col items-center opacity-0 transition-opacity duration-500 pt-12 pb-8">
-            <div class="relative mb-4">
-                <img id="team-logo" src="" alt="Logo do Time" class="h-32 w-32 md:h-40 md:w-40 object-contain rounded-full border-4 border-primary-orange shadow-lg" />
-            </div>
-            <h1 id="team-name" class="text-4xl md:text-6xl font-extrabold text-primary-orange">Carregando...</h1>
-            <p id="team-description" class="mt-2 text-lg text-neutral-300 max-w-2xl"></p>
-        </header>
+        <main class="w-full max-w-7xl mx-auto p-4 md:p-8 flex-grow">
+            <header class="text-center mb-10 pt-8">
+                <h1 class="text-5xl font-extrabold text-white">Nossos <span class="text-primary-orange">Times</span></h1>
+                <p class="text-lg text-gray-400 mt-2">Conheça todas as equipes que disputam o título da Royal Cup.</p>
+            </header>
 
-        <main class="w-full max-w-6xl mx-auto p-4 flex-grow">
-            <section id="team-stats" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center my-8 bg-neutral-800 p-4 rounded-xl border border-neutral-700"></section>
-
-            <div id="coaching-staff-section" class="bg-neutral-800/50 p-6 rounded-2xl shadow-xl border border-neutral-700 mb-8 hidden">
-                <h2 class="text-3xl font-extrabold text-primary-orange mb-8 border-b-2 border-primary-orange/30 pb-4">Comissão Técnica</h2>
-                <div id="coach-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-10"></div>
-            </div>
-            
-            <div class="bg-neutral-800/50 p-6 rounded-2xl shadow-xl border border-neutral-700">
-                <h2 class="text-3xl font-extrabold text-primary-orange mb-8 border-b-2 border-primary-orange/30 pb-4">Elenco</h2>
-                <section id="player-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-10">
-                    <p id="loading-players" class="col-span-full text-center text-gray-400">Carregando elenco...</p>
-                </section>
-            </div>
+            <section id="teams-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"></section>
         </main>
 
         <footer class="w-full p-6 text-center text-neutral-400 mt-12">
-            <a href="/index.html" class="inline-block bg-primary-orange text-black font-bold py-3 px-6 rounded-lg hover:bg-primary-orange-dark transition-transform transform hover:-translate-y-1 shadow-lg">← Voltar para o Campeonato</a>
+            <a href="/index.html" class="inline-block bg-primary-orange text-black font-bold py-3 px-6 rounded-lg hover:bg-primary-orange-dark transition-transform transform hover:-translate-y-1 shadow-lg">← Voltar para o Início</a>
             <p class="mt-8 text-sm">&copy; 2025 Royal Cup. Todos os direitos reservados.</p>
         </footer>
     </div>
+    
     <script>
         const btn = document.querySelector("button.mobile-menu-button");
         const menu = document.querySelector(".mobile-menu");
         btn.addEventListener("click", () => { menu.classList.toggle("hidden"); });
     </script>
-    <script type="module" src="/src/js/time.js"></script>
+    <script type="module" src="/src/js/teams.js"></script>
 </body>
 </html>

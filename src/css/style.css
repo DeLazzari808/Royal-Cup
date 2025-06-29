@@ -10,3 +10,20 @@
 .animate-marquee {
     animation: marquee 40s linear infinite;
 }
+.page-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 300px; /* Altura do banner */
+    background-image: 
+        repeating-linear-gradient(
+            -45deg, 
+            rgba(255, 153, 0, 0.1), 
+            rgba(255, 153, 0, 0.1) 1px, 
+            transparent 1px, 
+            transparent 20px
+        );
+    z-index: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+}

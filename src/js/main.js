@@ -147,28 +147,50 @@ function loadTopScorers(artilhariaData) {
 }
 
 /**
- * Preenche a tabela de classificação.
+ * Preenche as tabelas de classificação dos grupos.
  * @param {object} teamsData - Os dados de todos os times.
  */
 function loadStandings(teamsData) {
-    const tableBody = document.getElementById('standings-body');
-    if (!tableBody || !teamsData) return;
+    const tableBodyA = document.getElementById('standings-body-a');
+    const tableBodyB = document.getElementById('standings-body-b');
+    if (!tableBodyA || !tableBodyB || !teamsData) return;
 
+    // Definição CORRIGIDA dos times em cada grupo
+    const grupoA_ids = ['imp', 'amb', 'tnk', 'fdq', 'hip', 'ver', 'kwr', 'psg']; // Sai G29, entra PSG
+    const grupoB_ids = ['cfc', 'hor', 'asa', 'naj', 'vmt', 'rep', 'maf', 'futpro'];
+    
+    const allTeams = Object.keys(teamsData).map(id => ({ id, ...teamsData[id] }));
+
+    // Filtra e ordena os times para cada grupo
+    const teamsGrupoA = allTeams.filter(team => grupoA_ids.includes(team.id)).sort(sortTeams);
+    const teamsGrupoB = allTeams.filter(team => grupoB_ids.includes(team.id)).sort(sortTeams);
+
+    // Popula as tabelas
+    populateGroupTable(tableBodyA, teamsGrupoA);
+    populateGroupTable(tableBodyB, teamsGrupoB);
+}
+
+// Função auxiliar para ordenar os times
+function sortTeams(a, b) {
+    if ((b.pontos || 0) !== (a.pontos || 0)) return (b.pontos || 0) - (a.pontos || 0);
+    const saldoGolsA = (a.golsPro || 0) - (a.golsContra || 0);
+    const saldoGolsB = (b.golsPro || 0) - (a.golsContra || 0);
+    if (saldoGolsB !== saldoGolsA) return saldoGolsB - saldoGolsA;
+    return (b.golsPro || 0) - (a.golsPro || 0);
+}
+
+// Função auxiliar para popular uma tabela de grupo
+function populateGroupTable(tableBody, groupTeams) {
     tableBody.innerHTML = '';
-    const teamsWithIds = Object.keys(teamsData).map(id => ({ id, ...teamsData[id] }));
+    if (groupTeams.length === 0) {
+        tableBody.innerHTML = '<tr><td colspan="8" class="p-4 text-center text-gray-400">Nenhum time neste grupo.</td></tr>';
+        return;
+    }
 
-    const sortedTeams = teamsWithIds.sort((a, b) => {
-        if ((b.pontos || 0) !== (a.pontos || 0)) return (b.pontos || 0) - (a.pontos || 0);
-        const saldoGolsA = (a.golsPro || 0) - (a.golsContra || 0);
-        const saldoGolsB = (b.golsPro || 0) - (b.golsContra || 0);
-        if (saldoGolsB !== saldoGolsA) return saldoGolsB - saldoGolsA;
-        return (b.golsPro || 0) - (a.golsPro || 0);
-    });
-
-    sortedTeams.forEach((team, index) => {
+    groupTeams.forEach((team, index) => {
         const saldoGols = (team.golsPro || 0) - (team.golsContra || 0);
         const logoSrc = logoMap[team.id];
-        if (!logoSrc) return; // Pula o time se o logo não estiver no mapa
+        if (!logoSrc) return;
 
         tableBody.innerHTML += `
             <tr class="border-b border-neutral-800 hover:bg-neutral-700/50">
@@ -184,8 +206,6 @@ function loadStandings(teamsData) {
                 <td class="p-4 text-center">${team.vitorias || 0}</td>
                 <td class="p-4 text-center">${team.empates || 0}</td>
                 <td class="p-4 text-center">${team.derrotas || 0}</td>
-                <td class="p-4 text-center">${team.golsPro || 0}</td>
-                <td class="p-4 text-center">${team.golsContra || 0}</td>
                 <td class="p-4 text-center font-semibold">${saldoGols > 0 ? '+' : ''}${saldoGols}</td>
             </tr>
         `;

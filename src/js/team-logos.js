@@ -19,10 +19,11 @@ import magnatasLogo from '../assets/LOGOS/magnatas.png';
 import azzurraLogo from '../assets/LOGOS/azzurra.jpg';
 import kwrLogo from '../assets/LOGOS/kwrlogo.jpg';
 import hornetsLogo from '../assets/LOGOS/hornetslogo.jpg';
-import mafiaLogo from '../assets/LOGOS/mafia.jpg'; 
-import parisnaguaLogo from '../assets/LOGOS/parisnagua.png';
+import mafiaLogo from '../assets/LOGOS/mafia.jpg';
+import parisnaguaLogo from '../assets/LOGOS/parisnagua.png'; // Linha que faltava
 import repetilicosLogo from '../assets/LOGOS/repeticos.jpg';
-import najosLogo from '../assets/LOGOS/najos.jpg'; // Adicione o logo do Najos aqui
+import najosLogo from '../assets/LOGOS/najos.png';
+import futproLogo from '../assets/LOGOS/futpro.png';
 
 // Crie um "mapa" que associa a sigla do time ao logo importado
 export const logoMap = {
@@ -45,7 +46,8 @@ export const logoMap = {
   kwr: kwrLogo,
   hor: hornetsLogo,
   maf: mafiaLogo,
-  psg: parisnaguaLogo,
+  psg: parisnaguaLogo, // Mapeamento que faltava
   rep: repetilicosLogo,
-  naj: najosLogo, // Novo time
+  naj: najosLogo,
+  futpro: futproLogo,
 };

@@ -118,8 +118,8 @@
     },
     "partida02": {
       "data": "2025-06-29T14:00:00",
-      "placarA": 4,
-      "placarB": 2,
+      "placarA": 2,
+      "placarB": 4,
       "status": "Finalizado",
       "timeA": "ast",
       "timeB": "amb",
@@ -167,7 +167,7 @@
     },
     "partida07": {
       "data": "2025-06-29T19:00:00",
-      "placarA": 10,
+      "placarA": 9,
       "placarB": 8,
       "status": "Finalizado",
       "timeA": "dem",
@@ -176,8 +176,8 @@
     },
     "partida08": {
       "data": "2025-06-29T20:00:00",
-      "placarA": 2,
-      "placarB": 12,
+      "placarA": 12,
+      "placarB": 3,
       "status": "Finalizado",
       "timeA": "kwr",
       "timeB": "fdq",
@@ -185,8 +185,8 @@
     },
     "partida09": {
       "data": "2025-06-29T21:00:00",
-      "placarA": 12,
-      "placarB": 4,
+      "placarA": 3,
+      "placarB": 12,
       "status": "Finalizado",
       "timeA": "cfc",
       "timeB": "hor",
@@ -204,16 +204,16 @@
   },
   "times": {
     "amb": {
-      "derrotas": 1,
+      "derrotas": 0,
       "empates": 0,
-      "golsContra": 4,
-      "golsPro": 2,
+      "golsContra": 2,
+      "golsPro": 4,
       "instagramUrl": "https://www.instagram.com/_ambfoot/",
       "jogos": 1,
       "logoUrl": "/logos/ambfoot.jpg",
       "nome": "Ambfoot",
-      "pontos": 0,
-      "vitorias": 0
+      "pontos": 3,
+      "vitorias": 1
     },
     "asa": {
       "derrotas": 1,
@@ -236,20 +236,20 @@
       "jogos": 1,
       "logoUrl": "/logos/aster.jpg",
       "nome": "Aster FC",
-      "pontos": 3,
+      "pontos": 0,
       "vitorias": 1
     },
     "cfc": {
       "derrotas": 0,
       "empates": 0,
-      "golsContra": 4,
-      "golsPro": 12,
+      "golsContra": 12,
+      "golsPro": 3,
       "instagramUrl": "https://www.instagram.com/_carecasfc/",
       "jogos": 1,
       "logoUrl": "/logos/carecas-fc.jpeg",
       "nome": "Carecas FC",
-      "pontos": 3,
-      "vitorias": 1
+      "pontos": 0,
+      "vitorias": 0
     },
     "cmg": {
       "derrotas": 0,
@@ -267,7 +267,7 @@
       "derrotas": 0,
       "empates": 0,
       "golsContra": 8,
-      "golsPro": 10,
+      "golsPro": 9,
       "instagramUrl": "https://www.instagram.com/aaaeu.demolidores/",
       "jogos": 1,
       "logoUrl": "/logos/demolidores.jpg",
@@ -276,7 +276,7 @@
       "vitorias": 1
     },
     "fdq": {
-      "derrotas": 0,
+      "derrotas": 1,
       "empates": 0,
       "golsContra": 2,
       "golsPro": 12,
@@ -284,8 +284,8 @@
       "jogos": 1,
       "logoUrl": "/logos/fut-d-quinta.jpg",
       "nome": "Fut D'Quinta",
-      "pontos": 3,
-      "vitorias": 1
+      "pontos": 0,
+      "vitorias": 0
     },
     "futpro": {
       "derrotas": 0,
@@ -312,21 +312,21 @@
       "vitorias": 1
     },
     "hor": {
-      "derrotas": 1,
+      "derrotas": 0,
       "empates": 0,
-      "golsContra": 12,
-      "golsPro": 4,
+      "golsContra": 3,
+      "golsPro": 12,
       "instagramUrl": "https://www.instagram.com/timehornets/",
       "jogos": 1,
       "logoUrl": "/logos/hornetslogo.jpg",
       "nome": "Hornets",
-      "pontos": 0,
-      "vitorias": 0
+      "pontos": 3,
+      "vitorias": 1
     },
     "imp": {
       "derrotas": 1,
       "empates": 0,
-      "golsContra": 10,
+      "golsContra": 9,
       "golsPro": 8,
       "instagramUrl": "https://www.instagram.com/imperialrsports/",
       "jogos": 1,
@@ -336,16 +336,16 @@
       "vitorias": 0
     },
     "kwr": {
-      "derrotas": 1,
+      "derrotas": 0,
       "empates": 0,
-      "golsContra": 12,
-      "golsPro": 2,
+      "golsContra": 3,
+      "golsPro": 12,
       "instagramUrl": "https://www.instagram.com/kwr_barber/",
       "jogos": 1,
       "logoUrl": "/logos/kwrlogo.jpg",
       "nome": "KWR Barber FC",
-      "pontos": 0,
-      "vitorias": 0
+      "pontos": 3,
+      "vitorias": 1
     },
     "maf": {
       "derrotas": 1,
@@ -404,7 +404,7 @@
       "jogos": 1,
       "logoUrl": "/logos/repeticos.jpg",
       "nome": "Repetílicos",
-      "pontos": 1,
+      "pontos": 2,
       "vitorias": 0
     },
     "tnk": {

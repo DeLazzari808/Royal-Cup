@@ -1,4 +1,112 @@
 {
+  "artilharia": {
+    "art01": {
+      "gols": 6,
+      "nome": "thiago",
+      "time": "Futpro"
+    },
+    "art02": {
+      "gols": 5,
+      "nome": "Kadu",
+      "time": "Demolidores"
+    },
+    "art03": {
+      "gols": 5,
+      "nome": "Thales",
+      "time": "KWR Barber FC"
+    },
+    "art04": {
+      "gols": 4,
+      "nome": "rafael",
+      "time": "Imperial"
+    },
+    "art05": {
+      "gols": 4,
+      "nome": "erick",
+      "time": "Fut D'Quinta"
+    },
+    "art06": {
+      "gols": 3,
+      "nome": "caio augusto",
+      "time": "Hipertrofolia"
+    },
+    "art07": {
+      "gols": 3,
+      "nome": "Messias",
+      "time": "Veracruz"
+    },
+    "art08": {
+      "gols": 3,
+      "nome": "Caua",
+      "time": "Asa"
+    },
+    "art09": {
+      "gols": 3,
+      "nome": "murilo",
+      "time": "Najos FC"
+    },
+    "art10": {
+      "gols": 2,
+      "nome": "Mel",
+      "time": "Parisnaguá"
+    },
+    "art11": {
+      "gols": 2,
+      "nome": "Neno",
+      "time": "Tanck"
+    },
+    "art12": {
+      "gols": 2,
+      "nome": "Andre",
+      "time": "Ambfoot"
+    },
+    "art13": {
+      "gols": 2,
+      "nome": "Rafael",
+      "time": "Hipertrofolia"
+    },
+    "art14": {
+      "gols": 2,
+      "nome": "Eduardo",
+      "time": "Imperial"
+    },
+    "art15": {
+      "gols": 2,
+      "nome": "Thaigo",
+      "time": "Fut D'Quinta"
+    },
+    "art16": {
+      "gols": 2,
+      "nome": "wesley",
+      "time": "Fut D'Quinta"
+    },
+    "art17": {
+      "gols": 2,
+      "nome": "Kelvin",
+      "time": "Carecas FC"
+    },
+    "art18": {
+      "gols": 2,
+      "nome": "Luan",
+      "time": "Máfia"
+    },
+    "art19": {
+      "gols": 2,
+      "nome": "joao Pedro",
+      "time": "Máfia"
+    },
+    "art20": {
+      "gols": 2,
+      "nome": "alifer",
+      "time": "Demolidores"
+    },
+    "art21": {
+      "gols": 2,
+      "nome": "renan",
+      "time": "Demolidores"
+    }
+  },
+  "partidas": {
     "partida01": {
       "data": "2025-06-29T13:00:00",
       "placarA": 2,
@@ -79,4 +187,247 @@
       "timeA": "maf",
       "timeB": "futpro"
     }
+  },
+  "times": {
+    "amb": {
+      "derrotas": 1,
+      "empates": 0,
+      "golsContra": 4,
+      "golsPro": 2,
+      "instagramUrl": "https://www.instagram.com/_ambfoot/",
+      "jogos": 1,
+      "logoUrl": "/logos/ambfoot.jpg",
+      "nome": "Ambfoot",
+      "pontos": 0,
+      "vitorias": 0
+    },
+    "asa": {
+      "derrotas": 1,
+      "empates": 0,
+      "golsContra": 6,
+      "golsPro": 5,
+      "instagramUrl": "https://www.instagram.com/fut.asaufpr/",
+      "jogos": 1,
+      "logoUrl": "/logos/asa.png",
+      "nome": "Asa",
+      "pontos": 0,
+      "vitorias": 0
+    },
+    "ast": {
+      "derrotas": 0,
+      "empates": 0,
+      "golsContra": 2,
+      "golsPro": 4,
+      "instagramUrl": "https://www.instagram.com/aster_fc_2023/",
+      "jogos": 1,
+      "logoUrl": "/logos/aster.jpg",
+      "nome": "Aster FC",
+      "pontos": 3,
+      "vitorias": 1
+    },
+    "cfc": {
+      "derrotas": 0,
+      "empates": 0,
+      "golsContra": 4,
+      "golsPro": 12,
+      "instagramUrl": "https://www.instagram.com/_carecasfc/",
+      "jogos": 1,
+      "logoUrl": "/logos/carecas-fc.jpeg",
+      "nome": "Carecas FC",
+      "pontos": 3,
+      "vitorias": 1
+    },
+    "cmg": {
+      "derrotas": 0,
+      "empates": 0,
+      "golsContra": 1,
+      "golsPro": 2,
+      "instagramUrl": "https://www.instagram.com/athletico_m1l_gr4u/",
+      "jogos": 1,
+      "logoUrl": "/logos/cap-mil-grau.jpg",
+      "nome": "Cap Mil Grau",
+      "pontos": 3,
+      "vitorias": 1
+    },
+    "dem": {
+      "derrotas": 0,
+      "empates": 0,
+      "golsContra": 8,
+      "golsPro": 10,
+      "instagramUrl": "https://www.instagram.com/aaaeu.demolidores/",
+      "jogos": 1,
+      "logoUrl": "/logos/demolidores.jpg",
+      "nome": "Demolidores",
+      "pontos": 3,
+      "vitorias": 1
+    },
+    "fdq": {
+      "derrotas": 0,
+      "empates": 0,
+      "golsContra": 2,
+      "golsPro": 12,
+      "instagramUrl": "https://www.instagram.com/futdquintafc/",
+      "jogos": 1,
+      "logoUrl": "/logos/fut-d-quinta.jpg",
+      "nome": "Fut D'Quinta",
+      "pontos": 3,
+      "vitorias": 1
+    },
+    "futpro": {
+      "derrotas": 0,
+      "empates": 0,
+      "golsContra": 3,
+      "golsPro": 9,
+      "instagramUrl": "https://www.instagram.com/futpro.cwb/",
+      "jogos": 1,
+      "logoUrl": "/logos/futpro.png",
+      "nome": "Futpro",
+      "pontos": 3,
+      "vitorias": 1
+    },
+    "hip": {
+      "derrotas": 0,
+      "empates": 0,
+      "golsContra": 5,
+      "golsPro": 6,
+      "instagramUrl": "https://www.instagram.com/hipertrofolia/",
+      "jogos": 1,
+      "logoUrl": "/logos/hiper.jpg",
+      "nome": "Hipertrofolia",
+      "pontos": 3,
+      "vitorias": 1
+    },
+    "hor": {
+      "derrotas": 1,
+      "empates": 0,
+      "golsContra": 12,
+      "golsPro": 4,
+      "instagramUrl": "https://www.instagram.com/timehornets/",
+      "jogos": 1,
+      "logoUrl": "/logos/hornetslogo.jpg",
+      "nome": "Hornets",
+      "pontos": 0,
+      "vitorias": 0
+    },
+    "imp": {
+      "derrotas": 1,
+      "empates": 0,
+      "golsContra": 10,
+      "golsPro": 8,
+      "instagramUrl": "https://www.instagram.com/imperialrsports/",
+      "jogos": 1,
+      "logoUrl": "/logos/imperial.jpg",
+      "nome": "Imperial",
+      "pontos": 0,
+      "vitorias": 0
+    },
+    "kwr": {
+      "derrotas": 1,
+      "empates": 0,
+      "golsContra": 12,
+      "golsPro": 2,
+      "instagramUrl": "https://www.instagram.com/kwr_barber/",
+      "jogos": 1,
+      "logoUrl": "/logos/kwrlogo.jpg",
+      "nome": "KWR Barber FC",
+      "pontos": 0,
+      "vitorias": 0
+    },
+    "maf": {
+      "derrotas": 1,
+      "empates": 0,
+      "golsContra": 9,
+      "golsPro": 3,
+      "instagramUrl": "https://www.instagram.com/mafiaacademica/",
+      "jogos": 1,
+      "logoUrl": "/logos/mafia.jpg",
+      "nome": "Máfia",
+      "pontos": 0,
+      "vitorias": 0
+    },
+    "mag": {
+      "derrotas": 1,
+      "empates": 0,
+      "golsContra": 2,
+      "golsPro": 1,
+      "instagramUrl": "https://www.instagram.com/aaadup_/",
+      "jogos": 1,
+      "logoUrl": "/logos/magnatas.png",
+      "nome": "Magnatas",
+      "pontos": 0,
+      "vitorias": 0
+    },
+    "naj": {
+      "derrotas": 0,
+      "empates": 0,
+      "golsContra": 2,
+      "golsPro": 5,
+      "instagramUrl": "https://www.instagram.com/najosfc/",
+      "jogos": 1,
+      "logoUrl": "/logos/najos.png",
+      "nome": "Najos FC",
+      "pontos": 3,
+      "vitorias": 1
+    },
+    "psg": {
+      "derrotas": 1,
+      "empates": 0,
+      "golsContra": 6,
+      "golsPro": 2,
+      "instagramUrl": "https://www.instagram.com/_parisnagua_/",
+      "jogos": 1,
+      "logoUrl": "/logos/parisnagua.png",
+      "nome": "Parisnaguá",
+      "pontos": 0,
+      "vitorias": 0
+    },
+    "rep": {
+      "derrotas": 0,
+      "empates": 1,
+      "golsContra": 4,
+      "golsPro": 4,
+      "instagramUrl": "https://www.instagram.com/repetilicos/",
+      "jogos": 1,
+      "logoUrl": "/logos/repeticos.jpg",
+      "nome": "Repetílicos",
+      "pontos": 1,
+      "vitorias": 0
+    },
+    "tnk": {
+      "derrotas": 0,
+      "empates": 0,
+      "golsContra": 2,
+      "golsPro": 6,
+      "instagramUrl": "https://www.instagram.com/tanckfootclube/",
+      "jogos": 1,
+      "logoUrl": "/logos/tanck-foot.png",
+      "nome": "Tanck",
+      "pontos": 3,
+      "vitorias": 1
+    },
+    "ver": {
+      "derrotas": 0,
+      "empates": 1,
+      "golsContra": 4,
+      "golsPro": 4,
+      "instagramUrl": "https://www.instagram.com/veracruzfc_/",
+      "jogos": 1,
+      "logoUrl": "/logos/veracruz.jpg",
+      "nome": "Veracruz",
+      "pontos": 1,
+      "vitorias": 0
+    },
+    "vmt": {
+      "derrotas": 1,
+      "empates": 0,
+      "golsContra": 5,
+      "golsPro": 2,
+      "instagramUrl": "https://www.instagram.com/vila_marta_f7/",
+      "jogos": 1,
+      "logoUrl": "/logos/vila-marta.jpeg",
+      "nome": "Vila Marta",
+      "pontos": 0,
+      "vitorias": 0
+    }
   }
+}

@@ -90,3 +90,102 @@ body {
 .round:last-of-type .match-up::after {
     display: none;
 }
+
+/* =============================================== */
+/* == CSS PARA O CHAVEAMENTO (BRACKET) FINAL      == */
+/* =============================================== */
+.bracket-wrapper {
+    overflow-x: auto; /* Permite rolagem horizontal em telas pequenas */
+    padding: 1rem 0;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 0.5rem;
+}
+
+.bracket {
+    display: flex;
+    flex-direction: row;
+    min-width: 1400px; /* Largura mínima para o chaveamento completo */
+}
+
+.round {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 1;
+    padding: 0 1.5rem; /* Aumenta o espaçamento entre as fases */
+}
+
+.round-title {
+    text-align: center;
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 700; /* font-bold */
+    color: #F97316; /* primary-orange */
+    margin-bottom: 2rem;
+}
+
+.match-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin: 2rem 0; /* Aumenta o espaçamento vertical */
+}
+
+.match-card {
+    background-color: #262626;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    border: 1px solid #404040;
+    width: 250px; /* Largura fixa para os cards */
+}
+
+.match-team {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.team-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+    min-width: 0;
+}
+.team-name {
+    font-weight: 600;
+}
+.score {
+    font-weight: 700;
+}
+
+.winner .team-name, .winner .score {
+    color: #F97316;
+}
+
+/* Conectores */
+.round + .round .match-up::before {
+    content: '';
+    position: absolute;
+    background-color: #4a5568;
+    width: 1.5rem;
+    height: 2px;
+    top: 50%;
+    left: -1.5rem;
+    transform: translateY(-50%);
+}
+
+.round:not(:first-child) .match-up:nth-child(2n-1)::after {
+    content: '';
+    position: absolute;
+    background-color: #4a5568;
+    height: calc(100% + 4rem); /* Altura da linha vertical */
+    width: 2px;
+    top: 50%;
+    left: -1.5rem;
+}
+
+.round.champion-column .match-up::before,
+.round.champion-column .match-up::after {
+    display: none;
+}

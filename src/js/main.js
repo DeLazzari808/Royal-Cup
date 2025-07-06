@@ -13,11 +13,12 @@ async function getAllData() {
     });
 }
 
-// --- FUNÇÃO DE RENDERIZAÇÃO DE CARD DE JOGO (NOVO DESIGN) ---
+// FUNÇÃO DE RENDERIZAÇÃO DE CARD DE JOGO (VERSÃO SEGURA)
 function renderMatchCard(match, teamsData) {
-    if (!match) return '';
-    const teamA = teamsData[match.timeA] || { nome: match.timeA || 'A definir' };
-    const teamB = teamsData[match.timeB] || { nome: match.timeB || 'A definir' };
+    if (!match || !match.timeA || !match.timeB) return '';
+
+    const teamAData = teamsData[match.timeA] || { nome: match.timeA || 'A definir' };
+    const teamBData = teamsData[match.timeB] || { nome: match.timeB || 'A definir' };
     const logoA = logoMap[match.timeA] || '/img/default-logo.png';
     const logoB = logoMap[match.timeB] || '/img/default-logo.png';
     const scoreA = match.placarA ?? '-';
@@ -25,20 +26,55 @@ function renderMatchCard(match, teamsData) {
     const isWinnerA = scoreA !== '-' && scoreB !== '-' && scoreA > scoreB;
     const isWinnerB = scoreA !== '-' && scoreB !== '-' && scoreB > scoreA;
 
-    return `
-        <div class="match-card">
-            <div class="team-info ${isWinnerA ? 'winner' : ''}">
-                <img src="${logoA}" alt="${teamA.nome}" />
-                <span class="team-name">${teamA.nome}</span>
-            </div>
-            <span class="score ${isWinnerA ? 'winner' : ''}">${scoreA}</span>
-            <span class="match-separator">x</span>
-            <span class="score ${isWinnerB ? 'winner' : ''}">${scoreB}</span>
-            <div class="team-info justify-end ${isWinnerB ? 'winner' : ''}">
-                <span class="team-name">${teamB.nome}</span>
-                <img src="${logoB}" alt="${teamB.nome}" />
-            </div>
-        </div>`;
+    // Cria os elementos de forma segura
+    const card = document.createElement('div');
+    card.className = 'match-card';
+
+    const createTeamDiv = (team, logo, score, isWinner, alignRight = false) => {
+        const teamDiv = document.createElement('div');
+        teamDiv.className = `team-info${isWinner ? ' winner' : ''}${alignRight ? ' justify-end' : ''}`;
+
+        if (!alignRight) {
+            const img = document.createElement('img');
+            img.src = logo;
+            img.alt = team.nome;
+            teamDiv.appendChild(img);
+        }
+
+        const nameSpan = document.createElement('span');
+        nameSpan.className = 'team-name';
+        nameSpan.textContent = team.nome;
+        teamDiv.appendChild(nameSpan);
+
+        if (alignRight) {
+            const img = document.createElement('img');
+            img.src = logo;
+            img.alt = team.nome;
+            teamDiv.appendChild(img);
+        }
+
+        return teamDiv;
+    };
+
+    const scoreSpanA = document.createElement('span');
+    scoreSpanA.className = 'score' + (isWinnerA ? ' winner' : '');
+    scoreSpanA.textContent = scoreA;
+
+    const scoreSpanB = document.createElement('span');
+    scoreSpanB.className = 'score' + (isWinnerB ? ' winner' : '');
+    scoreSpanB.textContent = scoreB;
+
+    const separator = document.createElement('span');
+    separator.className = 'match-separator';
+    separator.textContent = 'x';
+
+    card.appendChild(createTeamDiv(teamAData, logoA, scoreA, isWinnerA, false));
+    card.appendChild(scoreSpanA);
+    card.appendChild(separator);
+    card.appendChild(scoreSpanB);
+    card.appendChild(createTeamDiv(teamBData, logoB, scoreB, isWinnerB, true));
+
+    return card.outerHTML;
 }
 
 // --- FUNÇÕES DE RENDERIZAÇÃO DE CADA SEÇÃO ---

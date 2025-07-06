@@ -26,15 +26,20 @@ async function getTeamsData() {
  */
 function renderTeamsGrid(teamsData) {
     const gridContainer = document.getElementById('teams-grid');
-    if (!gridContainer || !teamsData) return;
+    if (!gridContainer) return; // Se o container não existe, pare.
 
+    // Se teamsData for nulo ou vazio, mostre uma mensagem de carregamento/erro.
+    if (!teamsData) {
+        gridContainer.innerHTML = '<p class="col-span-full text-center text-gray-400">Carregando times...</p>';
+        return;
+    }
+    
     gridContainer.innerHTML = ''; // Limpa o container
 
     for (const teamId in teamsData) {
         const team = teamsData[teamId];
         const logoSrc = logoMap[teamId] || '/img/default-logo.png';
 
-        // Estrutura do Card Refinada
         const cardHtml = `
             <a href="/time.html?id=${teamId}" class="relative aspect-video block bg-neutral-800 rounded-xl overflow-hidden group transform hover:-translate-y-1 transition-transform duration-300 shadow-lg hover:shadow-primary-orange/20 border border-neutral-700">
                 <img src="${logoSrc}" alt="Logo ${team.nome}" class="w-full h-full object-contain p-4 transition-transform duration-300 group-hover:scale-110" />
@@ -47,10 +52,8 @@ function renderTeamsGrid(teamsData) {
     }
 }
 
-// Ponto de Entrada da Página
+// --- Ponto de Entrada da Página de Times ---
 document.addEventListener('DOMContentLoaded', async () => {
     const teamsData = await getTeamsData();
-    if (teamsData) {
-        renderTeamsGrid(teamsData);
-    }
+    renderTeamsGrid(teamsData); // Chame a função de renderização diretamente.
 });

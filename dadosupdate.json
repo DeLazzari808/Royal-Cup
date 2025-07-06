@@ -1,0 +1,82 @@
+{
+    "partida01": {
+      "data": "2025-06-29T13:00:00",
+      "placarA": 2,
+      "placarB": 6,
+      "status": "Finalizado",
+      "timeA": "psg",
+      "timeB": "tnk"
+    },
+    "partida02": {
+      "data": "2025-06-29T14:00:00",
+      "placarA": 2,
+      "placarB": 4,
+      "status": "Finalizado",
+      "timeA": "ast",
+      "timeB": "amb"
+    },
+    "partida03": {
+      "data": "2025-06-29T15:00:00",
+      "placarA": 4,
+      "placarB": 4,
+      "status": "Finalizado",
+      "timeA": "rep",
+      "timeB": "ver"
+    },
+    "partida04": {
+      "data": "2025-06-29T16:00:00",
+      "placarA": 5,
+      "placarB": 6,
+      "status": "Finalizado",
+      "timeA": "asa",
+      "timeB": "hip"
+    },
+    "partida05": {
+      "data": "2025-06-29T17:00:00",
+      "placarA": 5,
+      "placarB": 2,
+      "status": "Finalizado",
+      "timeA": "naj",
+      "timeB": "vmt"
+    },
+    "partida06": {
+      "data": "2025-06-29T18:00:00",
+      "placarA": 1,
+      "placarB": 2,
+      "status": "Finalizado",
+      "timeA": "mag",
+      "timeB": "cmg"
+    },
+    "partida07": {
+      "data": "2025-06-29T19:00:00",
+      "placarA": 9,
+      "placarB": 8,
+      "status": "Finalizado",
+      "timeA": "dem",
+      "timeB": "imp"
+    },
+    "partida08": {
+      "data": "2025-06-29T20:00:00",
+      "placarA": 12,
+      "placarB": 2,
+      "status": "Finalizado",
+      "timeA": "kwr",
+      "timeB": "fdq"
+    },
+    "partida09": {
+      "data": "2025-06-29T21:00:00",
+      "placarA": 4,
+      "placarB": 12,
+      "status": "Finalizado",
+      "timeA": "cfc",
+      "timeB": "hor"
+    },
+    "partida10": {
+      "data": "2025-06-29T22:00:00",
+      "placarA": 3,
+      "placarB": 9,
+      "status": "Finalizado",
+      "timeA": "maf",
+      "timeB": "futpro"
+    }
+  }

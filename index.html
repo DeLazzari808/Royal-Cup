@@ -1,84 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Royal Cup</title><link rel="icon" href="/favicon.ico" type="image/x-icon" /><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/css/style.css" /><script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Royal Cup</title><link rel="icon" href="/favicon.ico" type="image/x-icon" /><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/src/css/style.css" /><script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
-<body class="bg-neutral-900 min-h-screen text-white font-sans">
-    <div class="page-banner"></div>
+<body class="bg-gray-900 min-h-screen text-white font-sans">
     <div class="relative z-10 flex flex-col min-h-screen">
-        <nav class="bg-neutral-900/80 backdrop-blur-sm shadow-lg sticky top-0 z-50">
-            <div class="max-w-6xl mx-auto px-4">
-                <div class="flex justify-between">
-                    <div class="flex space-x-7">
-                        <div><a href="/index.html" class="flex items-center py-4 px-2"><img src="/img/royalcup-minimalistaLogo.jpg" alt="Logo" class="h-8 w-8 mr-2"><span class="font-semibold text-white text-lg">Royal Cup</span></a></div>
-                        <ul class="hidden md:flex items-center space-x-1">
-                            <li><a href="#group-stage" class="py-4 px-2 text-gray-300 font-semibold hover:text-primary-orange transition duration-300">Grupos</a></li>
-                            <li><a href="#playoffs-container" class="py-4 px-2 text-gray-300 font-semibold hover:text-primary-orange transition duration-300">Eliminatórias</a></li>
-                            <li><a href="/teams.html" class="py-4 px-2 text-gray-300 font-semibold hover:text-primary-orange transition duration-300">Times</a></li>
-                        </ul>
+        <nav class="bg-black/30 backdrop-blur-lg shadow-lg sticky top-0 z-50 border-b border-neutral-800">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex justify-between h-16">
+                    <div class="flex items-center">
+                        <a href="/index.html" class="flex items-center gap-2">
+                            <img src="/img/royalcup-minimalistaLogo.jpg" alt="Logo" class="h-8 w-8">
+                            <span class="font-bold text-white text-xl">Royal Cup</span>
+                        </a>
                     </div>
-                    <div class="md:hidden flex items-center"><button class="outline-none mobile-menu-button"><i class="ph ph-list text-white text-3xl"></i></button></div>
+                    <div class="hidden md:flex items-center space-x-4">
+                        <a href="#last-results-section" class="py-2 px-3 text-neutral-300 font-semibold hover:text-primary-orange transition duration-300 rounded-md">Resultados</a>
+                        <a href="#group-stage" class="py-2 px-3 text-neutral-300 font-semibold hover:text-primary-orange transition duration-300 rounded-md">Grupos</a>
+                        <a href="#knockout-stage" class="py-2 px-3 text-neutral-300 font-semibold hover:text-primary-orange transition duration-300 rounded-md">Mata-Mata</a>
+                        <a href="/teams.html" class="py-2 px-3 text-neutral-300 font-semibold hover:text-primary-orange transition duration-300 rounded-md">Times</a>
+                    </div>
+                    <div class="md:hidden flex items-center">
+                        <button class="outline-none mobile-menu-button">
+                            <i class="ph ph-list text-white text-3xl"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="hidden mobile-menu">
-                <ul>
-                    <li><a href="#group-stage" class="block text-sm px-2 py-4 hover:bg-primary-orange transition duration-300">Grupos</a></li>
-                    <li><a href="#playoffs-container" class="block text-sm px-2 py-4 hover:bg-primary-orange transition duration-300">Eliminatórias</a></li>
-                    <li><a href="/teams.html" class="block text-sm px-2 py-4 hover:bg-primary-orange transition duration-300">Times</a></li>
+                <ul class="p-2">
+                    <li><a href="#last-results-section" class="block text-sm px-4 py-3 hover:bg-primary-orange transition duration-300 rounded-md">Resultados</a></li>
+                    <li><a href="#group-stage" class="block text-sm px-4 py-3 hover:bg-primary-orange transition duration-300 rounded-md">Grupos</a></li>
+                    <li><a href="#knockout-stage" class="block text-sm px-4 py-3 hover:bg-primary-orange transition duration-300 rounded-md">Mata-Mata</a></li>
+                    <li><a href="/teams.html" class="block text-sm px-4 py-3 hover:bg-primary-orange transition duration-300 rounded-md">Times</a></li>
                 </ul>
             </div>
         </nav>
         
         <main class="flex-grow">
-            <section id="hero" class="relative text-center py-20 px-4 -mt-20 flex flex-col items-center justify-center">
-                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/img/Estadio-banner.png');"></div>
-                <div class="relative z-10 flex flex-col items-center justify-center">
-                    <img src="/img/royalcup-minimalistaLogo.jpg" alt="Royal Cup" class="h-24 w-24 mx-auto mb-4 drop-shadow-lg">
-                    <span class="font-extrabold text-5xl md:text-7xl tracking-tight text-white" style="font-family: 'Oswald', 'Open Sans', sans-serif;">Royal Cup</span>
+            <section id="hero" class="relative text-center py-24 px-4 bg-gray-800">
+                <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('/img/Estadio-banner.png');"></div>
+                <div class="relative z-10 max-w-4xl mx-auto">
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4 animate-fade-in-down">
+                        O MAIOR CAMPEONATO DE FUT7 DE CURITIBA
+                    </h1>
+                    <p class="text-xl md:text-2xl text-primary-orange mb-8 animate-fade-in-up">
+                        Disputa, emoção e rivalidade em alto nível. Acompanhe os jogos, resultados e o caminho até a taça!
+                    </p>
                 </div>
             </section>
-            <section id="team-carousel-section" class="py-12 bg-neutral-950/50"><div class="relative h-24 overflow-hidden"><div id="team-carousel" class="absolute left-0 flex h-full items-center"></div></div></section>
             
-            <section id="last-results-section" class="py-12 bg-neutral-900">
-                <div class="max-w-6xl mx-auto px-4">
-                    <h2 class="text-3xl font-bold text-center text-white mb-8">Últimos Resultados</h2>
-                    <div id="results-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    </div>
-                    <div id="see-more-container" class="text-center mt-8">
-                    </div>
+            <section id="teams-carousel" class="team-carousel-container">
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2 class="section-title">Times Participantes</h2>
+                    <div id="team-carousel" class="team-carousel"></div>
                 </div>
             </section>
-
-            <div id="championship-section" class="max-w-7xl mx-auto px-4 space-y-16 py-12">
-                <section id="group-stage">
-                    <h2 class="text-3xl font-bold text-center text-white mb-8">Fase de Grupos</h2>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        <div class="bg-neutral-800/50 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-bold text-center text-white p-4 bg-neutral-700/50 rounded-t-lg">Grupo A</h3>
-                            <div class="p-2"><table class="w-full text-sm"><thead class="text-xs text-neutral-400 uppercase"><tr><th class="p-3">#</th><th class="p-3">Time</th><th class="p-3 text-center">P</th><th class="p-3 text-center">J</th><th class="p-3 text-center">SG</th></tr></thead><tbody id="standings-body-a"></tbody></table></div>
-                        </div>
-                        <div class="bg-neutral-800/50 rounded-lg shadow-lg">
-                            <h3 class="text-xl font-bold text-center text-white p-4 bg-neutral-700/50 rounded-t-lg">Grupo B</h3>
-                            <div class="p-2"><table class="w-full text-sm"><thead class="text-xs text-neutral-400 uppercase"><tr><th class="p-3">#</th><th class="p-3">Time</th><th class="p-3 text-center">P</th><th class="p-3 text-center">J</th><th class="p-3 text-center">SG</th></tr></thead><tbody id="standings-body-b"></tbody></table></div>
-                        </div>
-                    </div>
+            
+            <div class="max-w-7xl mx-auto px-4 space-y-20 py-16">
+                <section id="last-results-section">
+                    <h2 class="section-title">Últimos Resultados</h2>
+                    <p class="section-subtitle">Confira os placares dos jogos mais recentes da fase de grupos.</p>
+                    <div id="results-container" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                    <div id="see-more-container" class="text-center mt-8"></div>
                 </section>
-                <section id="playoffs-container">
-                    <h2 class="text-3xl font-bold text-center text-white mb-8 border-t-2 border-neutral-700 pt-12">Fase Eliminatória</h2>
-                    <div id="play-in-container" class="mb-12"><h3 class="text-xl font-bold text-center text-primary-orange mb-4">Play-In</h3><div id="play-in-match-container" class="max-w-xl mx-auto"></div></div>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12">
-                        <div><h3 class="text-xl font-bold text-center text-primary-orange mb-4">Mata-Mata (High Bracket)</h3><div id="high-bracket-container" class="space-y-4"></div></div>
-                        <div><h3 class="text-xl font-bold text-center text-gray-400 mb-4">Repescagem (Low Bracket)</h3><div id="low-bracket-container" class="space-y-4"></div></div>
+                <section id="group-stage">
+                    <h2 class="section-title">Fase de Grupos</h2>
+                     <p class="section-subtitle">Acompanhe a classificação e a batalha por uma vaga nas eliminatórias.</p>
+                    <div id="group-stage-container" class="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+                </section>
+                <section id="knockout-stage">
+                    <h2 class="section-title">Fase Eliminatória</h2>
+                     <p class="section-subtitle">O caminho até a glória. Acompanhe o chaveamento de dupla eliminação.</p>
+                    <div class="card p-6 space-y-12">
+                        <div id="play-in-container"></div>
+                        <div class="bracket-wrapper">
+                            <div id="bracket-container" class="bracket"></div>
+                        </div>
                     </div>
-                    <div id="final-container" class="mt-16 pt-8 border-t-4 border-yellow-400"><h2 class="text-4xl font-extrabold text-center text-yellow-400 mb-6">GRANDE FINAL</h2><div id="grand-final-match-container" class="max-w-xl mx-auto"></div></div>
                 </section>
             </div>
         </main>
         
-        <footer class="bg-neutral-950 py-8"><div class="max-w-6xl mx-auto px-4"><div class="grid grid-cols-1 md:grid-cols-4 gap-8"><div class="md:col-span-1"><a href="/index.html" class="flex items-center"><img src="/img/royalcup-minimalistaLogo.jpg" alt="Logo" class="h-10 w-10 mr-3"><span class="font-semibold text-white text-xl">Royal Cup</span></a><p class="text-neutral-400 mt-4 text-sm">O maior campeonato de futebol 7 amador de Curitiba e região.</p></div><div><h3 class="font-bold text-white mb-4">Navegação</h3><ul class="space-y-2"><li><a href="/index.html" class="text-neutral-400 hover:text-primary-orange">Início</a></li><li><a href="#group-stage" class="text-neutral-400 hover:text-primary-orange">Grupos</a></li><li><a href="#playoffs-container" class="text-neutral-400 hover:text-primary-orange">Eliminatórias</a></li></ul></div><div><h3 class="font-bold text-white mb-4">Equipes</h3><ul class="space-y-2"><li><a href="/teams.html" class="text-neutral-400 hover:text-primary-orange">Ver Todos os Times</a></li></ul></div><div><h3 class="font-bold text-white mb-4">Suporte</h3><ul class="space-y-2"><li><a href="#" class="text-neutral-400 hover:text-primary-orange">Regulamento</a></li><li><a href="#" class="text-neutral-400 hover:text-primary-orange">Contato</a></li></ul></div></div><div class="border-t border-neutral-700 mt-8 pt-6 text-center text-neutral-500 text-sm"><p>&copy; 2025 Royal Cup. Todos os direitos reservados.</p></div></div></footer>
+        <footer class="bg-neutral-900 py-8 mt-16 border-t border-neutral-800">
+            <div class="max-w-7xl mx-auto px-4 text-center text-neutral-400">
+                <p>&copy; 2025 Royal Cup. Todos os direitos reservados.</p>
+            </div>
+        </footer>
     </div>
     <script type="module" src="/src/js/main.js"></script>
 </body>

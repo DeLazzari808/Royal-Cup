@@ -2,190 +2,169 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Estilo do corpo da página com o padrão de fundo */
+/* === CONFIGURAÇÕES GLOBAIS E NOVO FUNDO DINÂMICO === */
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 body {
-    background-color: #171717;
-    background-image: 
-        linear-gradient(135deg, rgba(255, 153, 0, 0.05) 10%, transparent 10%),
-        linear-gradient(225deg, rgba(255, 153, 0, 0.05) 10%, transparent 10%),
-        linear-gradient(45deg, rgba(255, 153, 0, 0.05) 10%, transparent 10%),
-        linear-gradient(315deg, rgba(255, 153, 0, 0.05) 10%, transparent 10%);
-    background-size: 40px 40px;
-    background-attachment: fixed;
+    background-color: #0c0a09; /* stone-950 */
+    background-image: radial-gradient(at 20% 80%, hsla(28,96%,20%,0.3) 0px, transparent 50%),
+                      radial-gradient(at 80% 10%, hsla(28,96%,40%,0.3) 0px, transparent 50%),
+                      radial-gradient(at 50% 50%, hsla(210,50%,30%,0.1) 0px, transparent 50%);
+    background-size: 200% 200%;
+    animation: gradient-animation 20s ease infinite;
+    font-family: 'Open Sans', sans-serif;
 }
 
-/* REGRA .page-banner REMOVIDA */
+/* === COMPONENTES REUTILIZÁVEIS === */
+.section-title {
+    @apply text-3xl font-extrabold text-center text-white mb-4 tracking-tight;
+}
+.section-subtitle {
+    @apply text-center text-neutral-400 mb-8 max-w-2xl mx-auto;
+}
+.card {
+    @apply bg-neutral-900/50 backdrop-blur-sm border border-neutral-700/80 rounded-xl shadow-2xl shadow-black/20;
+}
 
-/* ESTILO CORRIGIDO APLICADO DIRETAMENTE NA SEÇÃO HERO */
-#hero {
+/* === CARROSSEL DE TIMES === */
+.team-carousel-container {
+    @apply relative overflow-hidden py-8;
+}
+.team-carousel {
+    @apply flex space-x-8 animate-marquee;
+}
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* === CARD DE JOGO (Resultados e Mata-Mata) === */
+.match-card {
+    @apply bg-neutral-800/60 p-4 rounded-lg border border-neutral-700 transition-all duration-300 flex items-center justify-between mb-4;
+}
+.team-info {
+    @apply flex items-center gap-2 flex-1 min-w-0;
+}
+.team-name {
+    @apply font-semibold text-neutral-200 truncate text-base;
+}
+.score {
+    @apply text-2xl font-extrabold min-w-[32px] text-center transition-colors duration-200;
+}
+.winner .team-name, .winner .score {
+    @apply text-primary-orange font-extrabold;
+}
+.winner img {
+    @apply border-2 border-primary-orange shadow-md;
+}
+.match-separator {
+    @apply text-center text-lg text-neutral-500 font-bold mx-2 select-none;
+    font-family: 'Oswald', 'Open Sans', sans-serif;
+    letter-spacing: 0.1em;
+}
+.match-card img {
+    @apply w-10 h-10 rounded-full object-cover border border-neutral-700 transition-all duration-200;
+}
+
+/* === NOVO CHAVEAMENTO (BRACKET) SEM SCROLL HORIZONTAL === */
+#knockout-stage .card {
+    overflow: auto; /* Adiciona scroll vertical se necessário */
+    padding: 2rem;
+}
+.bracket-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adapta-se à largura da tela */
+    gap: 1rem;
+    align-items: start; /* Alinha os rounds no topo */
+}
+.round-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.round-title {
+    @apply text-center font-bold text-primary-orange mb-2 text-xl;
+}
+.match-up {
     position: relative;
-    background-image: url('/img/Estadio-banner.png');
-    background-size: cover;
-    background-position: center;
 }
-
-/* Sobreposição escura para dar contraste ao texto */
-#hero::before {
+/* Linhas de conexão (mais simples para layout vertical) */
+.match-up:not(:last-child)::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -0.5rem;
+    width: 2px;
+    height: 1rem;
+    background-color: #374151; /* gray-700 */
+}
+.round-column:not(:last-child) .match-up::before {
+    content: '';
+    position: absolute;
+    left: calc(100% + 0.5rem);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 2px;
+    background-color: #374151; /* gray-700 */
 }
 
-/* =============================================== */
-/* == CSS PARA O CHAVEAMENTO (BRACKET) DO MATA-MATA == */
-/* =============================================== */
+/* === ESTILO DO BRACKET EXISTENTE (MANTIDO PARA COMPATIBILIDADE) === */
 .bracket-wrapper {
-    overflow-x: auto;
-    padding: 1rem 0;
+    @apply overflow-x-auto p-4;
 }
-
 .bracket {
     display: flex;
     flex-direction: row;
     min-width: 1200px;
 }
-
 .round {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    flex: 1;
-    padding: 0 1rem;
+    flex-grow: 1;
 }
-
-.match-up {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.match-content {
+    flex-grow: 1;
+}
+.connector {
+    width: 2rem; /* 32px */
     position: relative;
-    margin: 1.5rem 0;
+    height: 100%;
 }
-
-.round + .round .match-up::before {
-    content: '';
+.connector-line {
     position: absolute;
-    background-color: #4a5568;
-    width: 2rem;
+    width: 100%;
     height: 2px;
+    background-color: #4b5563; /* gray-600 */
     top: 50%;
-    left: -2rem;
     transform: translateY(-50%);
 }
-
-.round:not(:first-child) .match-up:nth-child(2n-1)::after {
-    content: '';
+.connector-branch {
     position: absolute;
-    background-color: #4a5568;
-    height: calc(100% + 3rem);
     width: 2px;
-    top: 50%;
-    left: -2rem;
+    height: 50%;
+    background-color: #4b5563; /* gray-600 */
+    right: -2px;
+}
+.connector .top {
+    top: 0;
+}
+.connector .bottom {
+    bottom: 0;
 }
 
-.round:last-of-type .match-up::before,
-.round:last-of-type .match-up::after {
-    display: none;
+.champion-column {
+    @apply flex items-center justify-center;
 }
 
-/* =============================================== */
-/* == CSS PARA O CHAVEAMENTO (BRACKET) FINAL      == */
-/* =============================================== */
-.bracket-wrapper {
-    overflow-x: auto; /* Permite rolagem horizontal em telas pequenas */
-    padding: 1rem 0;
-    background-color: rgba(0,0,0,0.2);
-    border-radius: 0.5rem;
-}
-
-.bracket {
-    display: flex;
-    flex-direction: row;
-    min-width: 1400px; /* Largura mínima para o chaveamento completo */
-}
-
-.round {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex: 1;
-    padding: 0 1.5rem; /* Aumenta o espaçamento entre as fases */
-}
-
-.round-title {
-    text-align: center;
-    font-size: 1.25rem; /* text-xl */
-    font-weight: 700; /* font-bold */
-    color: #F97316; /* primary-orange */
-    margin-bottom: 2rem;
-}
-
-.match-up {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    margin: 2rem 0; /* Aumenta o espaçamento vertical */
-}
-
-.match-card {
-    background-color: #262626;
-    border-radius: 0.5rem;
-    padding: 0.75rem;
-    border: 1px solid #404040;
-    width: 250px; /* Largura fixa para os cards */
-}
-
-.match-team {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.team-info {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    flex: 1;
-    min-width: 0;
-}
-.team-name {
-    font-weight: 600;
-}
-.score {
-    font-weight: 700;
-}
-
-.winner .team-name, .winner .score {
-    color: #F97316;
-}
-
-/* Conectores */
-.round + .round .match-up::before {
-    content: '';
-    position: absolute;
-    background-color: #4a5568;
-    width: 1.5rem;
-    height: 2px;
-    top: 50%;
-    left: -1.5rem;
-    transform: translateY(-50%);
-}
-
-.round:not(:first-child) .match-up:nth-child(2n-1)::after {
-    content: '';
-    position: absolute;
-    background-color: #4a5568;
-    height: calc(100% + 4rem); /* Altura da linha vertical */
-    width: 2px;
-    top: 50%;
-    left: -1.5rem;
-}
-
-.round.champion-column .match-up::before,
-.round.champion-column .match-up::after {
-    display: none;
+@media (max-width: 640px) {
+  .animate-marquee {
+    animation-duration: 12s !important;
+  }
 }
